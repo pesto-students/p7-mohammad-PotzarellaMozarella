@@ -2,7 +2,7 @@
 #### _What happens when a URL is entered:_
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-![Uploading Screenshot 2022-11-11 at 10.51.05 AM.png…]()
+![This is an image](Week-1/Images/img1.png)
 
 In the simplest terms, the browser is a rendering engine. Its job is to download a web page and render it in a way that’s understandable by a human being.
 
