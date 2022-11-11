@@ -6,6 +6,7 @@
 In the simplest terms, the browser is a rendering engine. Its job is to download a web page and render it in a way that’s understandable by a human being.
 
 ![](images/img1.png)
+[![N|Solid](images/img1.png)
 
 - **DNS resolution**- This process makes sure that once the user enters a URL, the browser knows which server it has to connect to. The browser checks the cache for a DNS record to find the corresponding IP address of maps.google.com.The browser contacts a DNS server to find that google.comtranslates to 216.58.207.110, an IP address the browser can connect to.
 - **HTTP exchange**- Once the browser has identified which server is going to serve our request, it will initiate a TCP connection with it and begin the HTTP exchange. This is nothing but a way for the browser to communicate with the server what it needs, and for the server to reply back. For example, after the browser has successfully connected to the server behind `google.com,` it will send a request that looks like the following:
