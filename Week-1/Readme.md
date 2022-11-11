@@ -6,6 +6,7 @@ In the simplest terms, the browser is a rendering engine. Its job is to download
 ![This is an image](Images/img1.png)
 
 - **DNS resolution**- This process makes sure that once the user enters a URL, the browser knows which server it has to connect to. The browser checks the cache for a DNS record to find the corresponding IP address of maps.google.com.The browser contacts a DNS server to find that google.comtranslates to 216.58.207.110, an IP address the browser can connect to.
+- ![This is an image](Images/img2.png)
 - **HTTP exchange**- Once the browser has identified which server is going to serve our request, it will initiate a TCP connection with it and begin the HTTP exchange. This is nothing but a way for the browser to communicate with the server what it needs, and for the server to reply back. For example, after the browser has successfully connected to the server behind `google.com,` it will send a request that looks like the following:
     `GET / HTTP/1.1Host: google.comAccept: */*`
 - **Rendering**- In the  body  of the response, the server includes the representation of the response according to the `Content-Type` header. In our case, the content type was set to `text/html`, so we are expecting HTML markup in the response — which is exactly what we find in the body.
@@ -16,6 +17,7 @@ In the simplest terms, the browser is a rendering engine. Its job is to download
 
 #### _How the browser fetches the desired result?_
 The browser has **7 high-level architechtural components** that enable it to render the results as seen by the user
+![This is an image](Images/img3.png)
 - **The user interface:**
 This includes the address bar, back/forward button, bookmarking menu, etc. Every part of the browser display except the window where you see the requested page.
 - **The browser engine:** 
@@ -36,7 +38,7 @@ that people naturally use in email.
 #### _How does the rendering process work?_
 The below diagram explains the overall rendering engine flow:
 
-
+![This is an image](Images/img4.png)
 
 Steps involved are:
 - **Parsing** a document means translating it to a structure the code can use. The result of parsing is usually a tree of nodes that represent the structure of the document. This is called a parse tree or a syntax tree.
@@ -66,7 +68,7 @@ Steps involved are:
 4. children
 5. outline
 
-
+![This is an image](Images/img5.png)
 
 
 
