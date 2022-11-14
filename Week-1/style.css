@@ -42,7 +42,7 @@ li {
     display: flex;
 }
 
-img {
+#top-img {
     padding: 2rem;
 }
 .header-text {
