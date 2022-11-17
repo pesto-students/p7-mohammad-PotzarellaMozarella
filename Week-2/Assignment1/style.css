@@ -49,7 +49,15 @@
         .col {
             display: flex;
         }
-        
+        /* styling for the new grid added */
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .article-small {
+            padding: 0.5rem 1rem;
+        }
+
         /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
         @media only screen and (max-width: 1000px) {
             .col {
@@ -60,6 +68,15 @@
             width: 90%;
             padding: 0.5rem;
             }
+            .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+            .article-small {
+                padding: 0.5rem 2.6rem;
+                }
+                
         }
 
   /* Main: Form section */
