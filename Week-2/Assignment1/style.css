@@ -2,15 +2,34 @@
     font-family: 'Lato', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Open Sans', sans-serif;
+    color: #FFFFFA;
 }
-header, footer {
+/* Header and footer section styling */
+.header, .footer {
     text-align: center;
     display: block;
-    margin: 0 5rem;
+    padding: 1rem 5rem;
+    background-color: #0D5C63;
+    border-bottom: 0.2rem solid #FFFFFA ;
 }
+         /* header & footer font styling */
+        .header h1 {
+            font-family: 'Lora';
+        }
+        .company-name, .page-description, .heart, .contact {
+            color: #78CDD7 ;
+            font-family: 'Lato' ;
+        }
+        .company-name, .page-description {
+            font-weight: 600;
+        }
+        
+        
 /* Main: Articles section */
         .articles-wrapper {
-            margin: 0 5%;
+            padding: 1rem 5%;
+            background-color:#247B7B ;
+            border-bottom: 0.2rem solid #FFFFFA ;
         }
          /* aticles' styling */
         .article{
@@ -20,7 +39,7 @@ header, footer {
         }
         /* Image styling */
         .img {
-            border: 1px solid black;
+            border: 1px solid #FFFFFA ;
             width: 50%;
             margin: 1rem;
             padding: 1rem;
@@ -30,6 +49,7 @@ header, footer {
         .col {
             display: flex;
         }
+        
         /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
         @media only screen and (max-width: 1000px) {
             .col {
@@ -46,15 +66,18 @@ header, footer {
 
         /* Style the container */
                 .form-area {
-                    margin: 3rem 5rem 2rem 5rem; 
+                    padding: 3rem 5rem 2rem 5rem; 
+                    background-color:#247B7B ;
+                    border-bottom: 0.2rem solid #FFFFFA ;
                 }
                 .form-fieldset {
-                    background-color: #eeeeee;
+                    background-color: #44A1A0;
                 }
                 .form-legend {
-                    background-color: gray;
+                    background-color: #247B7B;
                     color: white;
                     padding: 5px 10px;
+                    border: 0.2rem solid #FFFFFA;
                 }
         /* Style inputs, select elements and textareas */
                 .input-section {
@@ -67,7 +90,7 @@ header, footer {
                 }
                 /* Style the submit & reset button */
                 .button {
-                    background-color: #04AA6D;
+                    background-color: #0D5C63;
                     color: white;
                     padding: 1rem 1rem;
                     margin-right: 1rem;
@@ -75,6 +98,11 @@ header, footer {
                     border-radius: 4px;
                     cursor: pointer;
                     float: left;
+                }
+                /* hover styling */
+                .button:hover {
+                    background-color: #78CDD7;
+                    color: black;
                 }
                 /* Style the label to display next to the inputs */
                 label {
