@@ -18,13 +18,13 @@
 /* sidebar styling */
 .sidebar {
     height: 85%;
-    background-color: rgba(241, 241, 241, 0.9);
+    background-color: #ececea;
 }
-a {
+.links {
     color: black; 
 }
 
-li {
+.sidebar-icons {
     padding: 2rem 1rem;
     
 }
@@ -50,7 +50,7 @@ li {
     position: relative;
     line-height: 1.6rem;
 }
-h1 {
+.playlist-name {
     padding: 2rem 0 1.5rem 0;
 }
 .playlist-control {
@@ -71,20 +71,19 @@ h1 {
 }
 
 /* playlist table styling */
-table {
+.table1 {
     width: 100%;
     padding: 0.2rem;
     
 }
-
-td {
+.cell {
     padding: 1rem 0.8rem 1rem 0;
   }
   
 tr:nth-child(even) {
-    background-color: rgba(241, 241, 241, 0.9);
+    background-color: #ececea;
   }
-td>a {
+.cell>a {
     text-decoration: underline;
     color: blue;
 }
@@ -119,6 +118,7 @@ td>a {
 .song-details {
     position: absolute;
     top: 50%;
+    left: 3%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     color: white;
