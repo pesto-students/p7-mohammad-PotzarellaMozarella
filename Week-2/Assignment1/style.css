@@ -104,6 +104,7 @@
                     border-radius: 4px;
                     box-sizing: border-box;
                     resize: vertical;
+                    color: black;
                 }
                 /* Style the submit & reset button */
                 .button {
