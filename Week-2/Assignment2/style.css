@@ -1,0 +1,38 @@
+.blocks {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.main {
+   position: relative;
+}
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hi { 
+    margin: 0;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#block1 {
+    background-color: red;
+}
+#block2 {
+    background-color: yellow;
+}
+#block3 {
+    background-color: blue;
+}
+#block4 {
+    background-color: green;
+}
