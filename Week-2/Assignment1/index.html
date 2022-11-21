@@ -2,63 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <!-- For css stylesheet -->
-    <link
-      rel="stylesheet"
-      href="style.css"
-    />
+    <link rel="stylesheet" href="style.css"/>
+
     <!-- For fonts -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
 
     <!-- For facebook/twitter sharing -->
-    <meta
-      property="og:title"
-      content="Playground | Season 2"
-    />
-    <meta
-      property="og:type"
-      content="video.series"
-    />
-    <meta
-      property="og:url"
-      content="https://www.youtube.com/c/PLAYGROUND_GLOBAL"
-    />
-    <meta
-      property="og:image"
-      content="Week-2/Assignment1/img.png"
-    />
-    <meta
-      property="og:description"
-      content="World's first ever gaming reality show."
-    />
-    <meta
-      name="twitter:image"
-      content="Week-2/Assignment1/img.png"
-    />
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
+    <meta property="og:title" content="Playground | Season 2" />
+    <meta property="og:type" content="video.series"/>
+    <meta property="og:url" content="https://www.youtube.com/c/PLAYGROUND_GLOBAL"/>
+    <meta property="og:image" content="Week-2/Assignment1/img.png"/>
+    <meta property="og:description" content="World's first ever gaming reality show."/>
+    <meta name="twitter:image" content="Week-2/Assignment1/img.png" />
+    <meta name="twitter:card" content="summary_large_image"/>
 
     <title>Playground | Season 2</title>
   </head>
@@ -225,133 +187,61 @@
 
     <form class="form-area">
       <fieldset class="form-fieldset">
-          <legend class="form-legend">Contact form</legend>
-          <br />
+        <legend class="form-legend">Contact form</legend>
+        <div class="input-blocks">
           <label> Title : </label>
-          <input
-            type="radio"
-            name="gender"
-          />
-          Mr
-          <input
-            type="radio"
-            name="gender"
-            checked
-          />
-          Mrs 
-          <input
-            type="radio"
-            name="gender"
-          />
-          Miss
-          <br /><br />
+          <input type="radio" name="gender" class="inline-blocks"/>Mr
+          <input type="radio" name="gender" checked class="inline-blocks"/>Mrs 
+          <input type="radio" name="gender" class="inline-blocks"/>Miss
+        </div>
+          
+        <div class="input-blocks">
           <label> Firstname* </label>
-          <input class="input-section"
-            type="text"
-            name="firstname"
-            size="15"
-            placeholder="Your name"
-            required
-          />
-          <br />
-          <br />
+          <input class="input-section" type="text" name="firstname" size="15" placeholder="Your name" required class="inline-blocks"/>
+        </div>
+          
+        <div class="input-blocks">
           <label> Lastname: </label>
-          <input class="input-section"
-            type="text"
-            name="lastname"
-            size="15"
-            placeholder="Your last name"
-          />
-          <br />
-          <br />
+          <input class="input-section" type="text" name="lastname" size="15" placeholder="Your last name"/>
+        </div> 
+
+        <div class="input-blocks">
           <label> Industry: </label>
-          <br />
-          <input
-            type="checkbox"
-            name="FMCG"
-          />
-          FMCG <br />
-          <input
-            type="checkbox"
-            name="Edtech"
-          />
-          Edtech <br />
-          <input
-            type="checkbox"
-            name="Travel/Hospitality"
-          />
-          Travel/Hospitality <br />
-          <input
-            type="checkbox"
-            name="Fintech"
-          />
-          Fintech<br />
-          <input
-            type="checkbox"
-            name="Automobile"
-          />
-          Automobile<br />
-          <input
-            type="checkbox"
-            name="Fashion"
-          />
-          Fashion<br />
-          <input
-            type="checkbox"
-            name="Real Estate"
-          />
-          Real Estate<br />
-          <br />
+          <p><input type="checkbox" name="FMCG"/>FMCG</p>
+          <p><input type="checkbox" name="Edtech"/>Edtech</p> 
+          <p><input type="checkbox" name="Travel/Hospitality"/>Travel/Hospitality </p>
+          <p><input type="checkbox" name="Fintech"/>Fintech </p>
+          <p><input type="checkbox" name="Automobile"/>Automobile </p> 
+          <p><input type="checkbox" name="Fashion"/>Fashion </p>
+          <p><input type="checkbox" name="Real Estate"/>Real Estate</p>
+        </div>
+          
+        <div class="input-blocks">
           <label> Phone:* </label>
-          <input class="input-section"
-            type="text"
-            name="phone"
-            size="10"
-            placeholder="9009009000"
-            required
-          />
-          <br />
-          <br />
+          <input class="input-section" type="text" name="phone" size="10" placeholder="9009009000" required/>
+        </div>
+
+        <div class="input-blocks">
           Address
-          <br />
-          <textarea class="input-section"
-            cols="80"
-            rows="5"
-            value="address"
-          >
-          </textarea>
-          <br />
-          <br />
+          <textarea class="input-section" cols="80" rows="5" value="address"></textarea>
+        </div>  
+          
+        <div class="input-blocks">
           Email:*
-          <input class="input-section"
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="name@xyz.com"
-          />
-          <br />
-          <br />
+          <input class="input-section" type="email" id="email" name="email" required placeholder="name@xyz.com"/>
+        </div>  
+         
+        <div class="input-blocks">
           Password:*
-          <input class="input-section"
-            type="Password"
-            id="pass"
-            name="pass"
-            required
-            placeholder="********"
-          />
-          <br />
-          <br />
+          <input class="input-section" type="Password" id="pass" name="pass"  required  placeholder="********"  />
+        </div>  
+
+        <div class="input-blocks">
           Confirm your password:*
-          <input class="input-section"
-            type="Password"
-            id="pass"
-            name="pass"
-            required
-            placeholder="********"
-          />
-          <br />
-          <br />
+          <input class="input-section"  type="Password"  id="pass"  name="pass"  required  placeholder="********"  />
+        </div>  
+         
+        <div class="input-blocks">
           <label> Country: </label>
           <select class="input-section">
             <option value="India">India</option>
@@ -362,25 +252,21 @@
             <option value="Japan">Japan</option>
             <option value="Brazil">Brazil</option>
           </select>
-          <br />
-          <br />
-          <input
-            type="checkbox"
-            name="tnc"
-            required
-          /><label> I agree to the <a href="">terms and conditions</a></label>
-          <br />
-          <br />
-          <input class="button"
-            type="submit"
-            value="Submit"
+        </div>  
+         
+        <div class="input-blocks">
+          <input  type="checkbox"  name="tnc" required/>
+          <label> I agree to the <a href="">terms and conditions</a></label>
+        </div> 
+         
+        <div class="buttons">
+          <input class="button"  type="submit"  value="Submit"  />
+          <input class="button"  type="reset"  value="Reset"
           />
-          <input class="button"
-            type="reset"
-            value="Reset"
-          />
-        </fieldset>
+        </div>   
+      </fieldset>
     </form>
+    
 <!-- Footer section -->
     <footer class="footer">
       <p class="made-with">Made with fun and<span class="heart"> &nbsp;♥&nbsp;</span>in India</p>
