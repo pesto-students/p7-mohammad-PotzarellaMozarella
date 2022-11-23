@@ -1,0 +1,136 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* outer container */
+.wrapper {
+    border-top: solid 3px black;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+/* sidebar styling */
+.sidebar {
+    height: 85%;
+    background-color: rgba(241, 241, 241, 0.9);
+}
+a {
+    color: black; 
+}
+
+li {
+    padding: 2rem 1rem;
+    
+}
+
+/* main playlist header styling */
+.main-content {
+    width: 100%;
+}
+
+.header {
+    background-color: grey;
+}
+
+.header-components {
+    display: flex;
+}
+
+img {
+    padding: 2rem;
+}
+.header-text {
+    color: white;
+    position: relative;
+    line-height: 1.6rem;
+}
+h1 {
+    padding: 2rem 0 1.5rem 0;
+}
+.playlist-control {
+    position: absolute;
+    bottom: 2rem;
+}
+.playlist-control>a, .song-control>a {
+    padding-right: 1rem;
+    color: white;
+}
+.song-control>a
+    {
+        padding: 2rem;
+
+    }
+.control {
+    padding-right: 0.4rem;
+}
+
+/* playlist table styling */
+table {
+    width: 100%;
+    padding: 0.2rem;
+    
+}
+
+td {
+    padding: 1rem 0.8rem 1rem 0;
+  }
+  
+tr:nth-child(even) {
+    background-color: rgba(241, 241, 241, 0.9);
+  }
+td>a {
+    text-decoration: underline;
+    color: blue;
+}
+.col1 {
+    padding-left: 1rem;
+}
+.col4 {
+    text-align: center;
+}
+
+/* footer with currently playing styling */
+.footer {
+    background-color: #1c5591;
+    display: block;
+    position:absolute;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+}
+.footer-components {
+    display: inline-flex;   
+    width: 100%;
+    height: 100%;
+    
+}
+.footer-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+   }
+.song-details {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: white;
+    line-height: 2.5rem;
+}
+.song-control {
+    width: 50%; 
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: white;
+}
+
+
