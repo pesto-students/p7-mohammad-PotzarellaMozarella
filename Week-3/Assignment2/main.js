@@ -9,12 +9,17 @@
 
         // object definition for student objects 1 & 2
             const student1 = {
-                name: "Jimmy ",
+                name: "JimmyBind ",
             };
             const student2 = {
-                name: "Julie ",
+                name: "JulieBind ",
             };
-
+            const student5 = {
+                name: "Jimmy",
+            };
+            const student6 = {
+                name: "Julie",
+            };
         const result = student.introduction; //storing the reference to the function for re-use
 
 /*Example for bind which creates a new function bound with a set of values */
@@ -31,8 +36,8 @@
         resultBind3(); // Output: Jimmy scored 95 in an exam. The value of resultBind is fixed to the object its bind with PERMANENTLY. This means that it cant be changed
 
 /*Example for call which accepts a list of arguments */
-        result.call(student1, 92, 81); // Output: Jin scored 92 in an exam.
-        result.call(student2, 98, 98); // Output: Jill scored 98 in an exam.
+        result.call(student5, 92, 81); // Output: Jin scored 92 in an exam.
+        result.call(student6, 98, 98); // Output: Jill scored 98 in an exam.
 
 /* Example for apply which accepts an array of arguments */
-        result.apply(student1, [98, 91]); // Output: Jimmy  scored 98 and 91 in the exams.
+        result.apply(student5, [98, 91]); // Output: Jimmy  scored 98 and 91 in the exams.
