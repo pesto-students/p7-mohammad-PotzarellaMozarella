@@ -25,4 +25,4 @@ function vowelCount(str){
 let result = vowelCount("official");
 
 //printing the Map
-console.log(result);
+console.log(result); // Map(3) { 'o' => 1, 'i' => 2, 'a' => 1 }
