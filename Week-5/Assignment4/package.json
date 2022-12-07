@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "mathOperations",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "parisha",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
