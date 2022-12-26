@@ -21,4 +21,6 @@ const maxSubArray = function (A) {
 //SC: O(C)
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+//output:6
 console.log(maxSubArray([1, 2, 3, 4, -10]));
+//output:10 
