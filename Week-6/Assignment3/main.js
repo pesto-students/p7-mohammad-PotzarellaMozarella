@@ -10,7 +10,6 @@ const sortArray = function(arr) {
     for (let i=0; i<arr.length; i++) {
         //increment if the number is present in the map, i.e the number is 0, 1 or 2
         if(count.has(arr[i])) {
-            count.get(arr[i]); 
             count.set(arr[i], count.get(arr[i]) + 1 || 1);
         }
 
