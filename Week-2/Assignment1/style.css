@@ -1,0 +1,140 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFA;
+}
+/* Header and footer section styling */
+.header, .footer {
+    text-align: center;
+    display: block;
+    padding: 1rem 5rem;
+    background-color: #0D5C63;
+    border-bottom: 0.2rem solid #FFFFFA ;
+}
+         /* header & footer font styling */
+        .header h1 {
+            font-family: 'Lora';
+        }
+        .company-name, .page-description, .heart, .contact {
+            color: #78CDD7 ;
+            font-family: 'Lato' ;
+        }
+        .company-name, .page-description {
+            font-weight: 600;
+        }
+        
+        
+/* Main: Articles section */
+        .articles-wrapper {
+            padding: 1rem 5%;
+            background-color:#247B7B ;
+            border-bottom: 0.2rem solid #FFFFFA ;
+        }
+         /* aticles' styling */
+        .article{
+            width: 50%;
+            padding: 0.5rem 2rem;
+            flex: 1;
+        }
+        /* Image styling */
+        .img {
+            border: 1px solid #FFFFFA ;
+            width: 50%;
+            margin: 1rem;
+            padding: 1rem;
+            flex: 1;
+        }
+         /* articles and image to appear in 2 column layout styling */
+        .col {
+            display: flex;
+        }
+        /* styling for the new grid added */
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .article-small {
+            padding: 0.5rem 1rem;
+        }
+
+        /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
+        @media only screen and (max-width: 1000px) {
+            .col {
+            flex-direction: column;
+            align-items: center;
+            }
+            .article {
+            width: 90%;
+            padding: 0.5rem;
+            }
+            .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+            .article-small {
+                padding: 0.5rem 2.6rem;
+                }
+                
+        }
+
+  /* Main: Form section */
+
+        /* Style the container */
+                .form-area {
+                    padding: 3rem 5rem 2rem 5rem; 
+                    background-color:#247B7B ;
+                    border-bottom: 0.2rem solid #FFFFFA ;
+                }
+                .form-fieldset {
+                    background-color: #44A1A0;
+                }
+                .form-legend {
+                    background-color: #247B7B;
+                    color: white;
+                    padding: 5px 10px;
+                    border: 0.2rem solid #FFFFFA;
+                }
+        /* Style inputs, select elements and textareas */
+                .input-section {
+                    width: auto;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    resize: vertical;
+                    color: black;
+                }
+                /* Style the submit & reset button */
+                .button {
+                    background-color: #0D5C63;
+                    color: white;
+                    padding: 1rem 1rem;
+                    margin-right: 1rem;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: left;
+                }
+                /* hover styling */
+                .button:hover {
+                    background-color: #78CDD7;
+                    color: black;
+                }
+                /* Style the label to display next to the inputs */
+                .input-blocks, .buttons{
+                    padding: 12px 12px 12px 0;
+                    display: block;
+                }
+               
+                
+                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 1000px) {
+                    .input-section {
+                    width: 100%;
+                    margin-top: 0;
+                    }
+                }
+ 
+  
