@@ -83,7 +83,7 @@ function merge(left, right) {
         else {
             sortedArr.push(right.shift());
         }
-    }//if eithre left or right array run out of elements
+    }//if either left or right array run out of elements
     // copy the remaining elements of left[], if there are any
     while(left?.length) {
         sortedArr.push(left.shift());
