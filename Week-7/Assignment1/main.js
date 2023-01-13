@@ -9,6 +9,7 @@ class Node {
 // linkedlist class
 class linkedList {
     constructor(){
+        
         this.head = null;
         this.size = 0;
     }
@@ -25,7 +26,7 @@ class linkedList {
     // adds an element at the end of list
     append(element){
         // create a new node for the element
-        node = new Node(element);
+        let node = new Node(element);
         // to store current node
         let curr;
         // if list is Empty add the element and make it head
