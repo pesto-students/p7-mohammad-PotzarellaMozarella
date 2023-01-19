@@ -40,7 +40,7 @@ class BinaryTree {
     }
 }
 // assume the minimum and maximum values for the first check to be null
-function isValidBST (root, min = null, max = null) { debugger
+function isValidBST (root, min = null, max = null) { 
     // if node is null then it is a BST
     if(!root) return true;
     // check if the current node's value is within boundaries (min/max)
