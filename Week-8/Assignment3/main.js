@@ -43,9 +43,9 @@ class BinaryTree {
 function levelOrderTrav (root) {
     // initilaize queue with root & result to store each level as an array
     let queue = [root], result = [];
-    // interate until there are rows/levels left in the tree 
+    // iterate until there are rows/levels left in the tree 
     while(queue.length) {
-        //interate overt the row/tree level and store each node in an array-row
+        //iterate overt the row/tree level and store each node in an array-row
         let len = queue.length, row = [];
         for (let i = 0; i < len; i++) {
             // get FIFO node from queue to remove the nodes for each row from queue and add to the row array
