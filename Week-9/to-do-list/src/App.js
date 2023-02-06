@@ -19,8 +19,32 @@ function App() {
   // updateData will hold task that is being edited
   const [updateData, setupdateData] = useState('');
 
+  //Add task function
+  const addTask = () => {
 
-   return (
+  }
+  //Delete task function
+  const deleteTask = (id) => {
+    
+  }
+  //Mark completed task function
+  const markDone = (id) => {
+    
+  }
+  //Edit task function
+  const editTask = () => {
+    
+  }
+  //Cancel update task function
+  const cancelUpdate = () => {
+    
+  }
+  //Change task for update function
+  const changeTask = (event) => {
+    
+  }
+
+  return (
     <div className="container App">
   {/* Title */}
       <h1>To-Do List</h1>
