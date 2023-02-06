@@ -21,16 +21,35 @@ function App() {
 
   //Add task function
   const addTask = () => {
-
+    //if there is a newTask we create 1) a newEntry object 2) setToDo with it 3) reset the newTask element
+    if(newTask){
+      let num = toDo.length + 1;
+      let newEntry = {id: num, title: newTask, status: false}
+      setToDo([...toDo, newEntry]);
+      setnewTask('');
+    }
   }
+
   //Delete task function
   const deleteTask = (id) => {
-    
+    let newTasks = toDo.filter(task => task.id != id)
+    setToDo(newTasks);
   }
+
   //Mark completed task function
   const markDone = (id) => {
-    
+    //toggle the status between true and false
+    let newTask = toDo.map(task => {
+      if(task.id === id) {
+        return (
+          {...task, status: !task.status}
+        )
+      }
+    return task;  
+    })
+    setToDo(newTask);
   }
+
   //Edit task function
   const editTask = () => {
     
@@ -51,8 +70,28 @@ function App() {
 
   {/* Form to add tasks to-do */}
       <div className="input-group mb-3">
-        <input type="text" className="form-control" placeholder="Enter task to do" aria-label="Enter task to do" aria-describedby="button-addon2"/>
-        <button className="btn btn-lg btn-success" type="button" id="button-addon2">Add task</button>
+        <input type="text" 
+          className="form-control" 
+          placeholder="Enter task to do"
+          value= {newTask}
+          onChange= {(e) => {setnewTask(e.target.value)}}
+        />
+        <button className="btn btn-lg btn-success" 
+          type="button" 
+          id="button-addon2"
+          onClick={addTask}>
+          Add task
+        </button>
+      </div>
+
+   {/* Form to update tasks to-do */}
+   <div className="input-group mb-3">
+        <input type="text" className="form-control mx-2"/>
+        <div className="col-auto">
+          <button className="btn btn-lg btn-success mr-20" type="button" id="button-addon2">Update task</button>
+          <button className="btn btn-lg btn-warning mx-2" type="button" >Cancel</button>
+        </div>
+        
       </div>
 
   {/*To display message if to do list is empty */}
@@ -69,14 +108,20 @@ function App() {
                   <span className='taskNumber'>{index + 1}</span>
                   <span className='taskDetails'>{task.title}</span>
                 </div>
+                
                 <div className='iconsWrapper'>
-                  <span title='Mark done'>
+                  <span title='Mark done' 
+                    onClick={() => {markDone(task.id)}}>
                     <FontAwesomeIcon icon={faCircleCheck} />
                   </span>
-                  <span title='Edit'>
+
+                  {/* If the task status is false (not completed) only then show edit option */}
+                  {task.status ? null : ( <span title='Edit'>
                     <FontAwesomeIcon icon={faPen} />
-                  </span>
-                  <span title='Delete'>
+                  </span>)}
+                 
+                  <span title='Delete' 
+                    onClick={() => {deleteTask(task.id)}}>
                     <FontAwesomeIcon icon={faTrashCan} />
                   </span>
                 </div>

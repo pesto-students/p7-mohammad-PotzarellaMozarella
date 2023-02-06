@@ -7,7 +7,7 @@ body {
   
 }
 .taskBg {
-  background-color: grey;
+  background-color: black;
   border-radius: 6px;
   margin-bottom: 20px;
   padding: 10px 140px 10px 50px;
@@ -19,10 +19,12 @@ body {
 }
 .taskBg .taskDetails{
   flex: 1;
+  text-align: left;
 }
 .taskBg  .done .taskDetails{
   text-decoration: line-through;
   opacity: 0.3;
+  
 }
 .taskNumber {
   color: white;
@@ -53,8 +55,12 @@ body {
   display: inline-block;
   margin: 0 10px 0 10px;
   cursor: pointer;
-  color: greenyellow;
+  color: teal;
 }
 .taskBg .iconsWrapper span:hover{
   color: burlywood;
+}
+#button-addon2 {
+  background-color: teal;
+  color: white;
 }
