@@ -1,10 +1,13 @@
-body {
-  background-color: darkblue;
+.my-body {
+  /* text-decoration: node; */
+  background-color: black;
   color: white;
 }
 .App {
   text-align: center;
-  
+}
+.page-header {
+  margin: 30px;
 }
 .taskBg {
   background-color: black;
@@ -16,6 +19,7 @@ body {
   position: relative;
   font-weight: 600;
   color: white;
+  border: 1px solid white;
 }
 .taskBg .taskDetails{
   flex: 1;
@@ -24,7 +28,6 @@ body {
 .taskBg  .done .taskDetails{
   text-decoration: line-through;
   opacity: 0.3;
-  
 }
 .taskNumber {
   color: white;
@@ -35,7 +38,7 @@ body {
   display: flex;
   text-align: center;
   font-size: 14px;
-  margin-right: 8px;
+  margin-right: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -47,7 +50,6 @@ body {
   position: absolute;
   top: 25%;
   right: 15px;
-  /* transform: translate(-50%); */
   width: auto;
   display: inline-block;
 }
@@ -55,12 +57,18 @@ body {
   display: inline-block;
   margin: 0 10px 0 10px;
   cursor: pointer;
-  color: teal;
-}
-.taskBg .iconsWrapper span:hover{
-  color: burlywood;
-}
-#button-addon2 {
-  background-color: teal;
   color: white;
 }
+.taskBg .iconsWrapper span:hover{
+  color: teal;
+}
+.taskBg .iconsWrapper span:focus{
+  color: white;
+ }
+ #btnUpdate #button-addon2{
+  background-color: teal;
+ }
+ #btnCancel {
+  background-color: rgba(255, 0, 0, 0.334);
+  color: white;
+ }
