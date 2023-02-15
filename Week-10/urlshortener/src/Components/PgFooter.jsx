@@ -1,7 +1,5 @@
 import React from "react"
-
 import "bootstrap/dist/css/bootstrap.min.css"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -38,7 +36,7 @@ export default function PgFooter() {
           </section>
         </div>
 
-        <div className="container p-4">
+        <div className="container pt-1 pb-5">
           <a href=""
           className="text-white text-decoration-none">
             © 2020 Copyright:</a>
