@@ -1,13 +1,18 @@
 import React from "react"
+
 import "bootstrap/dist/css/bootstrap.min.css"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(fab)
+
 
 export default function PgFooter() {
   return (
     <>
       <footer 
       className="bg-black text-center text-white border-top">
-        {/* social icons */}
         <div className="container">
           <section className="mb-4 d-flex p-4 justify-content-center">
             <div className="icons pt-4">
@@ -32,7 +37,7 @@ export default function PgFooter() {
             </div>
           </section>
         </div>
-        {/* footer node with copyright info */}
+
         <div className="container p-4">
           <a href=""
           className="text-white text-decoration-none">
