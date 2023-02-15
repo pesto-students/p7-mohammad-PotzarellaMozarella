@@ -1,8 +1,14 @@
-.App {
-  text-align: center;
-}
-#btncopy:focus
-{
+/* *{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+} */
+
+.icon{
+  cursor: pointer;
   color: white;
-  background-color:black !important; /* add here any color */
 }
+.icon:hover{
+  color: blanchedalmond;
+}
+.icon:focus{
+  color: blanchedalmond;
+ }

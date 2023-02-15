@@ -51,10 +51,10 @@ export default function Shortener() {
 
   return (
     <>
-      <div style={{ backgroundColor: "black" }}>
+      <div style={{ backgroundColor: "black" }} className="pb-3 bb-1">
         {/* Input link section */}
         <form
-          className="row g-3 p-2 mx-2 d-flex justify-content-evenly "
+          className="row g-3 pt-5 p-2 mx-2 d-flex justify-content-evenly "
           onSubmit={handleSubmit}>
           <div className="col-md-6">
             <input
@@ -91,10 +91,8 @@ export default function Shortener() {
               </li>
               <li>
                 <button 
-                id="btncopy"
-                className="btn my-3 btn-light btn-sm "
+                className="btn my-3 btn-outline-light btn-sm"
                 onClick={handleCopy}
-                
                 >
                 {buttonText}
                 </button>
@@ -104,5 +102,5 @@ export default function Shortener() {
         </div>
       </div>
     </>
-  );
+  )
 }
