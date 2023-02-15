@@ -2,13 +2,13 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 } */
 
-.icon{
+.icons a{
   cursor: pointer;
-  color: white;
+  color: white !important;
 }
-.icon:hover{
+.icons a:hover{
   color: blanchedalmond;
 }
-.icon:focus{
+.icons a:focus{
   color: blanchedalmond;
  }
