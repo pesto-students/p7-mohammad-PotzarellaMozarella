@@ -16,7 +16,7 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 
 
 ***
-![Homepage](https://i.imgur.com/Y9IYydZ.png)
+![Homepage](Images/BriefScreenshot.png)
 ***
 
 ### Setup
