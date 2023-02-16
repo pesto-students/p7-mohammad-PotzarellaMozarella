@@ -17,7 +17,8 @@ export default function Shortener() {
   //for changing 'Copy' button text to 'Copied' on click
   const [buttonText, setButtonText] = useState("Copy")
 
-  // handles submit of longg url, 
+
+  // handles submit of long url, 
   // fetching the short urls using async/await
   // setting the result as new link
   // changing  the urlc input area to blank
@@ -85,7 +86,7 @@ export default function Shortener() {
           <article>
             <ul className="list-group">
               <li>
-                <button className="text-info bg-dark "                >
+                <button className="text-info bg-dark ">
                 {links.full_short_link}
                 </button>
               </li>
