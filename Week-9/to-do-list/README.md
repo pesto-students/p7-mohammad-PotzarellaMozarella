@@ -20,19 +20,19 @@ You can find more about the assignment at [To do list app app](https://pestotech
 ### Screenshots
 ## Home Page
 
-![Homepage](src/ToDo_1.png)
+![Homepage](src/images/ToDo_1.png)
 
 ## Add task
 
-![Add task](src/ToDo_2.png)
+![Add task](src/images/ToDo_2.png)
 
 ## Edit task
 
-![Edit task](src/ToDo_3.png)
+![Edit task](src/images/ToDo_3.png)
 
 ## Done task
 
-![Done task](src/ToDo_4.png)
+![Done task](src/images/ToDo_4.png)
 ***
 
 ### Setup
