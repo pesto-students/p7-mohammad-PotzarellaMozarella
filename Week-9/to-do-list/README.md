@@ -17,10 +17,15 @@ You can find more about the assignment at [To do list app app](https://pestotech
 
 
 ***
+### Screenshots
+Home Page
 ![Homepage](src/ToDo_1.png)
-![Homepage](src/ToDo_2.png)
-![Homepage](src/ToDo_3.png)
-![Homepage](src/ToDo_4.png)
+Add task
+![Add task](src/ToDo_2.png)
+Edit task
+![Edit task](src/ToDo_3.png)
+Done task
+![Done task](src/ToDo_4.png)
 ***
 
 ### Setup
