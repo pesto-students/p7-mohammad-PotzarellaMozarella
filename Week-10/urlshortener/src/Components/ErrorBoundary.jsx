@@ -23,7 +23,7 @@ export class ErrorBoundary extends Component {
         if (this.state.hasError) {
             return (
                 <div className="bg-black text-center text-white border-top pt-4 pb-5">
-                    <h2 >Something went wrong. Try again.</h2>
+                    <h2 className="pb-2">Something went wrong. Try again.</h2>
                     <Spinner></Spinner>
                 </div>
             )       
