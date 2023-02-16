@@ -20,10 +20,6 @@ function App() {
   // updateData will hold task that is being edited
   const [updateData, setupdateData] = useState('')
 
-  useEffect(() => { 
-    setTasksRemaining(tasks.filter(task => !task.completed).length) 
-  });
-
   //Add task function
   ///////////////////////////
   const addTask = () => {
@@ -93,8 +89,6 @@ function App() {
 
       {/* Title */}
       <h1 className='page-header'>To-Do List</h1>
-
-      <div className="header">Pending tasks ({tasksRemaining})</div>
 
       {/* Based on updateData existing, i.e edit icon being clicked either of the Forms will render */}
       {updateData ? (
