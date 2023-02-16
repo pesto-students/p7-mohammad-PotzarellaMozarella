@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faL, faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 function ToDo({toDo, markDone, setupdateData, deleteTask}) {
-    return (
+
+  const todoslist = toDo
+  .sort((a,b) => a.id > b.id ? 1 : -1)
+  return (
         <>
         {/* Adds To Dos by sorting them in order of index, displays id and title, and shows icons for marking done, edit or deleting todos */}
-            { toDo && toDo
-            .sort((a,b) => a.id > b.id ? 1 : -1)
-            .map((task, index) => {
+            { todoslist.map((task, index) => {
               return (
                 <React.Fragment key= {task.id}>
                   <div className='col taskBg'>
