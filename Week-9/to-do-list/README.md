@@ -1,25 +1,52 @@
-# Getting Started with Create React App
+# To Do list App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-To Do List App React JS (Add, Edit, Update, Delete, Toggle Tasks)
+This project was built with [Create React App](https://github.com/facebook/create-react-app)
 
-## How to Use
+You can find more about the assignment at [To do list app app](https://pestotech.teachable.com/courses/1911069/lectures/43351562) 
 
+### Features
+* User can add a new task in the to do list
+* User can edit & update the existing tasks, mark them done, delete them
+* User can mark the tasks done
+* User can delete the tasks
+
+### Built using
+* react
+* bootstrap
+* font awesome
+
+
+***
+![Homepage](src/ToDo_1.png)
+![Homepage](src/ToDo_2.png)
+![Homepage](src/ToDo_3.png)
+![Homepage](src/ToDo_4.png)
+***
+
+### Setup
 Clone or download repo NodeJS / NPM / Yarn should be installed in your PC
-
 Open terminal or Git for Windows (Git Bash) Run these commands:
 
-### Install Dependencies
-yarn install
+1. clone repo
+```
+$ git clone https://github.com/tsungtingdu/react-url-shortener
+```
+2. go to project folder
+```
+$ cd react-url-shortener
+```
+3. install packages
+```
+$ npm install
+```
+4. run app
+```
+$ npm start
+```
 
-OR
-
-npm install
-
-### Run app
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+and you will see react app on http://localhost:3000 in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+***
