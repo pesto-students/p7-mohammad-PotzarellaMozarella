@@ -34,7 +34,7 @@ $ npm install
 ```
 4. run app
 ```
-$ npm run dev
+$ npm start
 ```
 
 and you will see react app on http://localhost:3000
