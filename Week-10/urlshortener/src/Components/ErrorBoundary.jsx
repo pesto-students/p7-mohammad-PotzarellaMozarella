@@ -22,10 +22,9 @@ export class ErrorBoundary extends Component {
     render() {
         if (this.state.hasError) {
             return (
-                <div className='text-align-centre'>
-                    <Spinner>
-                    </Spinner>
-                    <h1>Something went wrong.</h1>
+                <div className="bg-black text-center text-white border-top pt-4 pb-5">
+                    <h2 >Something went wrong. Try again.</h2>
+                    <Spinner></Spinner>
                 </div>
             )       
         }
