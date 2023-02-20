@@ -8,6 +8,7 @@ function Spinner() {
         src={spinner}
         style={{ width: '100px', margin: 'auto', display: 'block' }}
         alt="Loading..."
+        className='rounded-circle '
       />
     </div>
   );

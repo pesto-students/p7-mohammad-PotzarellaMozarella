@@ -5,7 +5,7 @@ import showcase from '../images/smolURL.svg';
 export default function Header() {
   return (
     <>
-      <div className="card mb-3">
+      <div className="card">
         <img
           src={showcase}
           className="card-img-top"

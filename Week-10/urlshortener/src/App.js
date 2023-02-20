@@ -13,7 +13,6 @@ export default function App() {
       <ErrorBoundary>
         <Shortener></Shortener>
       </ErrorBoundary>
-      <Shortener></Shortener>
       <PgFooter></PgFooter>
     </div>
   );
