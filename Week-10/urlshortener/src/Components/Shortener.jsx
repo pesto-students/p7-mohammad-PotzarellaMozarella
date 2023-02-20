@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { set } from "lodash";
 
 // handles getting the short-links from the storage
 // if none exists from previous sessions it returns []
@@ -20,12 +19,13 @@ export default function Shortener() {
   //for loading spinner
   const [loading, setLoading] = useState(false);
 
-  // handles submit of long url,
+  // handles submit of long url
   // fetching the short urls using async/await
   // setting the result as new link
   // changing  the urlc input area to blank
   const handleSubmit = e => {
     e.preventDefault()
+    //if input is empty throws as alert
     if (!userInput) {
       alert("Input is empty");
     } else {
@@ -64,6 +64,7 @@ export default function Shortener() {
 
   return (
     <>
+      {/* Uses ternary operator to show loading screen or component */}
       <div>
         {loading ? (
           <div class="d-flex justify-content-center my-5">
@@ -129,23 +130,3 @@ export default function Shortener() {
   );
 }
 
-  /*
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!userInput) {
-      alert("Input is empty");
-    } else {
-      const shortenLink = async () => {
-        const res = await fetch(
-          `https://api.shrtco.de/v2/shorten?url=${userInput}`
-        );
-        const data = await res.json();
-        console.log(data.result);
-        setLinks(data.result);
-        setUserInput("");
-        
-      };
-      shortenLink();
-    }
-  };
-  */

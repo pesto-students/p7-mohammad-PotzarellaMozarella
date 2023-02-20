@@ -8,14 +8,12 @@ import ErrorBoundary from './Components/ErrorBoundary';
 export default function App() {
   return (
     <div className="App">
-
       <Navbar></Navbar>
       <Header></Header>
       <ErrorBoundary>
         <Shortener></Shortener>
       </ErrorBoundary>
       <PgFooter></PgFooter>
-
     </div>
   );
 }

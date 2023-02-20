@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+ {/* Navigation section */}
 export default function Navbar() {
   return (
     <>
