@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { set } from "lodash";
 
 // handles getting the short-links from the storage
 // if none exists from previous sessions it returns []
@@ -19,34 +20,37 @@ export default function Shortener() {
   //for loading spinner
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
-
   // handles submit of long url,
   // fetching the short urls using async/await
   // setting the result as new link
   // changing  the urlc input area to blank
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault()
     if (!userInput) {
       alert("Input is empty");
     } else {
       const shortenLink = async () => {
-        const res = await fetch(
-          `https://api.shrtco.de/v2/shorten?url=${userInput}`
-        );
-        const data = await res.json();
-        console.log(data.result);
-        setLinks(data.result);
-        setUserInput("");
-      };
-      shortenLink();
+        setLoading(true)
+        try {
+          const res = await fetch(
+            `https://api.shrtco.de/v2/shorten?url=${userInput}`
+          );
+          const data = await res.json();
+          console.log(data.result);
+          setLinks(data.result);
+          setUserInput("");
+        }
+        catch(error) {
+          console.log('Error', error)
+        }
+        finally {
+          setLoading(false);
+        }
+      }
+      shortenLink()
     }
-  };
+  }
+ 
   // handles copying link to clipboard
   // changing text on copy button on click
   const handleCopy = () => {
@@ -124,3 +128,24 @@ export default function Shortener() {
     </>
   );
 }
+
+  /*
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!userInput) {
+      alert("Input is empty");
+    } else {
+      const shortenLink = async () => {
+        const res = await fetch(
+          `https://api.shrtco.de/v2/shorten?url=${userInput}`
+        );
+        const data = await res.json();
+        console.log(data.result);
+        setLinks(data.result);
+        setUserInput("");
+        
+      };
+      shortenLink();
+    }
+  };
+  */
