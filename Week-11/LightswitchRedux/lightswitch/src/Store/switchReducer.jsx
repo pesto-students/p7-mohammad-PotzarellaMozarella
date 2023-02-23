@@ -19,7 +19,8 @@ const switchSlice = createSlice({
     }
 });
 
-//exports both toggle reducers to be used by RoomLight component onClick
+//exports both toggle actions to be used by RoomLight component onClick
 export const {toggleLight, toggleDark} = switchSlice.actions;
+
 //exports reducers to be used by store
 export default switchSlice.reducer;
