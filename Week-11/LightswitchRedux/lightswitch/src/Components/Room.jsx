@@ -1,16 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch, useSelector } from "react-redux";
-import { toggleOn, toggleOff } from '../Store/switchReducer.jsx';
+import { toggleLight, toggleDark } from '../Store/switchReducer.jsx';
 
 export default function RoomLight(props) {
-    const switchValue = useSelector((state) => state.light.active);
+    const switchValue = useSelector((state) => state.light.status);
     const dispatch = useDispatch();
     // console.log(light)
     function ToggleSwitchHandler() {
         if (switchValue == true) {
-           dispatch(toggleOff());
+           dispatch(toggleLight());
         } else {
-           dispatch(toggleOn());
+           dispatch(toggleDark());
         }
      }
    
