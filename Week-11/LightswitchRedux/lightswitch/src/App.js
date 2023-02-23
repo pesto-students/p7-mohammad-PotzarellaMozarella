@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <>
-                <div className={toggle ? 'bg-dark text-light' : 'bg-light text-dark'}>
+                <div className={toggle ? 'bg-dark text-light h-100' : 'bg-light text-dark h-100'}>
                     <p>the room is {lightedness}</p>
                     <br />
                     <button onClick={handleFlip}>flip</button>
