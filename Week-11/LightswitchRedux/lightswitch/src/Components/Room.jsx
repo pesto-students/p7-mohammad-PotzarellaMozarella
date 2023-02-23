@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch, useSelector } from "react-redux";
-import { toggleOn, toggleOff } from '../Store/switch.jsx';
+import { toggleOn, toggleOff } from '../Store/switchReducer.jsx';
 
 export default function RoomLight(props) {
     const switchValue = useSelector((state) => state.light.active);

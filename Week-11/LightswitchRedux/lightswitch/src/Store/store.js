@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import switchReducer from './switch';
+import switchReducer from './switchReducer';
 
 export const store = configureStore({
    reducer: {
