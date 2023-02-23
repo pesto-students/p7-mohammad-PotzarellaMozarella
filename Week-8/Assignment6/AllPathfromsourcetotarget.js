@@ -33,8 +33,8 @@ var allPathsSourceTarget = function(graph) {
     }
     return result;
 };
-// TC:
-// SC: 
+// TC: MxN
+// SC: O(N)x5
 let graph = [[1,2],[3],[3],[]];
 console.log(allPathsSourceTarget(graph)); //output expected: [[0,1,3],[0,2,3]]
 // graph = [[4,3,1],[3,2,4],[3],[4],[]];
