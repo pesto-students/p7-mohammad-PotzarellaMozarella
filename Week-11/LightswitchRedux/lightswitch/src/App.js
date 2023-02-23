@@ -1,6 +1,5 @@
 import './App.css';
-
-import RoomLight from './Components/Room'
+import RoomLight from './Components/RoomLight'
 
 export default function App() {
   return (
