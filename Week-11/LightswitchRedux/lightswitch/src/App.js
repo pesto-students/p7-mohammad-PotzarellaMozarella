@@ -1,11 +1,13 @@
 import './App.css';
-import Room from './Components/Room'
+
+import RoomLight from './Components/Room'
 
 export default function App() {
   return (
     <div className="App">
-      <Room></Room>
+      <RoomLight></RoomLight>
     </div>
   );
 }
+
 
