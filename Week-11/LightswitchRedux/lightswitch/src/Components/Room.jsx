@@ -1,6 +1,8 @@
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// import {createStore} from "redux";
+
 export default function Room() {
     const [toggle, setToggle] = useState(true);
     const lightedness = toggle ? "dark" : "lit";
