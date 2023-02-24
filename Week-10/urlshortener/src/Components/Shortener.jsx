@@ -43,7 +43,7 @@ export default function Shortener() {
         setLoading(true)
         try {
           const res = await fetch(
-            `https://api.shrtco.de/v2/shorten?url=${userInput}`, { mode: 'no-cors'}
+            `https://api.shrtco.de/v2/shorten?url=${userInput}`
           );
           const data = await res.json();
           console.log(data.result);
