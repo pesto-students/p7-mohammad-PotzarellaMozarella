@@ -1,5 +1,7 @@
 import { React, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+//helps validate URL input
+import validator from 'validator'
 
 // handles getting the short-links from the storage
 // if none exists from previous sessions it returns []
@@ -18,6 +20,9 @@ export default function Shortener() {
   const [buttonText, setButtonText] = useState("Copy");
   //for loading spinner
   const [loading, setLoading] = useState(false);
+  //for URL input error message
+  const [errorMessage, setErrorMessage] = useState('')
+
 
   // handles submit of long url
   // fetching the short urls using async/await
@@ -28,19 +33,24 @@ export default function Shortener() {
     //if input is empty throws as alert
     if (!userInput) {
       alert("Input is empty");
-    } else {
+    } 
+    //if input is invalid throws as alert
+    else if (errorMessage == 'Is Not Valid URL') {
+      alert("Input is invalid");
+    }  
+    else {
       const shortenLink = async () => {
         setLoading(true)
         try {
           const res = await fetch(
-            `https://api.shrtco.de/v2/shorten?url=${userInput}`
+            `https://api.shrtco.de/v2/shorten?url=${userInput}`, { mode: 'no-cors'}
           );
           const data = await res.json();
           console.log(data.result);
           setLinks(data.result);
           setUserInput("");
         }
-        catch(error) {
+        catch (error) {
           console.log('Error', error)
         }
         finally {
@@ -50,7 +60,7 @@ export default function Shortener() {
       shortenLink()
     }
   }
- 
+
   // handles copying link to clipboard
   // changing text on copy button on click
   const handleCopy = () => {
@@ -62,16 +72,25 @@ export default function Shortener() {
     localStorage.setItem("links", JSON.stringify(links));
   }, [links]);
 
+  //validates uf input is a URL and sends error msg
+  const validate = (value) => {
+    if (validator.isURL(value)) {
+      setErrorMessage('Is Valid URL')
+    } else {
+      setErrorMessage('Is Not Valid URL')
+    }
+  }
+
   return (
     <>
       {/* Uses ternary operator to show loading screen or component */}
       <div>
         {loading ? (
-          <div class="d-flex justify-content-center my-5">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+          <div className="d-flex justify-content-center my-5">
+            <div className="spinner-border" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
           </div>
-        </div>
         ) : (
           <div
             style={{ backgroundColor: "black" }}
@@ -86,8 +105,14 @@ export default function Shortener() {
                   placeholder="Shorten a link here"
                   className="form-control"
                   value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
+                  onChange={(e) => {
+                    setUserInput(e.target.value);
+                    validate(e.target.value)}}
                 />
+                <span style={{
+          fontWeight: 'bold',
+          color: 'red',
+        }}>{errorMessage}</span>
               </div>
               <div className="col-auto">
                 <button
