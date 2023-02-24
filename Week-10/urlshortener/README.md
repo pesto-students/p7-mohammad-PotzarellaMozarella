@@ -22,7 +22,7 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 ### Setup
 1. clone repo
 ```
-$ git clone https://github.com/tsungtingdu/react-url-shortener
+$ git clone https://github.com/PotzarellaMozarella/p7-mohammad-Parisha/tree/week10/Week-10/urlshortener
 ```
 2. go to project folder
 ```
