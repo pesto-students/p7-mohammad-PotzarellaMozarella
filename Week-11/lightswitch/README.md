@@ -2,7 +2,7 @@
 
 This project was built with [Create React App](https://github.com/facebook/create-react-app) redux.
 
-You can find more about the assignment at [API shortner app](https://pestotech.teachable.com/courses/1911069/lectures/43351538) 
+You can find more about the assignment at [Toggle Light Switch app](https://pestotech.teachable.com/courses/1911069/lectures/43351538) 
 
 ### Features
 * User can toggle between light and dark background using the Flip switch
