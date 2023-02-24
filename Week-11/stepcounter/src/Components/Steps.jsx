@@ -1,3 +1,4 @@
+//css for button
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
@@ -7,7 +8,7 @@ import { addStep, resetSteps } from '../Store/stepReducer.js';
 
 
 export default function Steps(props) {
-    //helps access data/switch status from the global store using callback function
+    //helps access data/count state from the global store using callback function
     const stepsValue = useSelector((state) => state.steps.count);
     const dispatch = useDispatch();
 
@@ -47,11 +48,3 @@ export default function Steps(props) {
     );
 }
 
-
-{/* <div className='container mt-4'>
-          <div className={switchValue ? 'bg-dark text-light min-vh-100 pt-4' : 'bg-light text-dark min-vh-100 pt-4'}>
-            <p>the room is {switchValue ? "dark" : "lit"}</p>
-            <br />
-            <button className='mt-10' onClick={() => { ToggleSwitchHandler() }}>flip</button>
-          </div>
-        </div> */}

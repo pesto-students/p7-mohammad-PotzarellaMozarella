@@ -12,11 +12,9 @@ const stepsSlice = createSlice({
     reducers: {
       addStep: (state = {count: 0}) => {
         state.count++;
-        // console.log(state.count)
       },
       resetSteps: (state = {count: 0}) => {
         state.count = 0;
-        // console.log(state.count)
       }
     }
 });
