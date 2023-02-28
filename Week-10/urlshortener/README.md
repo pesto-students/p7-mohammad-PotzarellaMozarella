@@ -1,5 +1,7 @@
 # React URL shortener
 
+[Click her to checkout the app](https://smolurlshortener.netlify.app/)
+
 This project was built with [Create React App](https://github.com/facebook/create-react-app), with shrtco.de as API.
 
 You can find more about the assignment at [API shortner app](https://pestotech.teachable.com/courses/1911069/lectures/43351654) 
@@ -13,13 +15,14 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 * react
 * bootstrap
 * font awesome
+* validator
 
 
 ***
 ![Homepage](Images/smolURL_screenshot.png)
 ***
 
-### Setup
+### Setup on local
 1. clone repo
 ```
 $ git clone https://github.com/tsungtingdu/react-url-shortener
