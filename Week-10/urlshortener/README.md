@@ -15,6 +15,7 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 * react
 * bootstrap
 * font awesome
+* validator
 
 
 ***
