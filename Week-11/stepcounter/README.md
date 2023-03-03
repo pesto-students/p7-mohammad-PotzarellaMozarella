@@ -1,6 +1,8 @@
 # React-Redux Steps Counter
 
-This project was built with [Create React App](https://github.com/facebook/create-react-app) redux.
+[Click here to see App](https://stepcounterapp.netlify.app/)
+
+This project was built with redux.
 
 You can find more about the assignment at [Steps counter app](https://pestotech.teachable.com/courses/1911069/lectures/43351538) 
 
