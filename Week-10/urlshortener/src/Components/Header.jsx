@@ -5,11 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function Header() {
   return (
     <>
-      <div className="card rounded-0"
-      style={{
-        backgroundColor: '#006a4e',
-        color: 'white'
-      }}>
+      <div className="card rounded-0 text-bg-light">
         <div className="card-body my-5">
           <h5 className="card-title">URL shortner</h5>
           <p className="card-text">
@@ -20,3 +16,4 @@ export default function Header() {
     </>
   );
 }
+
