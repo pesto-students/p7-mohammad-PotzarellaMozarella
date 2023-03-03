@@ -11,11 +11,6 @@ export default function RoomLight(props) {
   //uses useDispatch hook to call action creators on click
   function ToggleSwitchHandler() {
     switchValue ? dispatch(toggleLight()) : dispatch(toggleDark())
-    // if (switchValue == true) {
-    //   dispatch(toggleLight());
-    // } else {
-    //   dispatch(toggleDark());
-    // }
   }
   return (
     <div className="App">
