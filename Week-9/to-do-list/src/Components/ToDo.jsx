@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleCheck, faL, faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 function ToDo({toDo, markDone, setupdateData, deleteTask}) {
 
