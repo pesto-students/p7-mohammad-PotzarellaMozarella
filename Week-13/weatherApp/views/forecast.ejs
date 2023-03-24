@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('pages/partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('pages/partials/header'); %></header>
+    <!-- Search area for input section -->
+    <main>
+      <div class="jumbotron">
+        <h1>This is a weather app</h1>
+        <div class="input-group mb-3 my-5">
+          <form
+            action="/"
+            method="post"
+            class="form-inline">
+            <div class="form-group mb-2">
+              <input
+                name="city"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Enter city name" />
+                <input
+                name="days"
+                type="number"
+                class="form-control mx-sm-3"
+                placeholder="Enter date" />
+            </div>
+
+            <button
+              type="submit"
+              value="Get weather"
+              class="btn btn-primary mb-2">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div class="jumbotron">
+            <%if(forecast !== null) {%>
+            <div class="mb-3">
+                <h3>
+                    <%= headline %>:
+                  </h3>
+                  <ul>
+                    <% forecast.forEach(function(forecast) { %>
+                    <li>
+                      <strong><%= forecast.date %></strong>
+                      <p><%= forecast.weatherConditon %></p>
+                      <p>Max temp: <%= forecast.maxTemp %> deg celsius</p> 
+                      <p>Min temp: <%= forecast.minTemp %> deg celsius</p> 
+                      <p>Humidity: <%= forecast.humidity %>%</p>
+                    </li>
+                    <% }); %>
+                  </ul>
+            <%}%> <%if (error !== null) {%>
+            <p><%= error %></p>
+            <%}%>
+          </div>
+      </div>
+    </main>
+    <!--Weather result display section  -->
+    
+    <footer><%- include('pages/partials/footer'); %></footer>
+  </body>
+</html>
