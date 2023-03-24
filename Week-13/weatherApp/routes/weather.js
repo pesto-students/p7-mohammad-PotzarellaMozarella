@@ -172,6 +172,54 @@ router.get('/:city/:datetime', (req, res) => {
     }
 });
 
+//for weather page to render all cities weather in the current.json file
+router.get('/', (req, res) => {
+    var request = require('request')
+    request(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=bulk`,
+        function (error, response, body) {
+            let data = JSON.parse(body);
+            //for pagination
+            const page = parseInt(req.query.page)
+            const limit = parseInt(req.query.limit)
+            const startIndex = (page - 1) * limit
+            const endIndex = (page) * limit
+            const results = {}
+            if (endIndex < data.length) {
+                results.next = {
+                    page: page + 1,
+                    limit: limit
+                }
+            }
+            if (startIndex > 0) {
+                results.prev = {
+                    page: page - 1,
+                    limit: limit
+                }
+            }
+            if (response.statusCode === 200) {
+                results.results = data.slice(startIndex, endIndex)
+                res.render('pages/weather');
+                // res.json(res.results)
+            }
+            else console.log(error)
+        }
+    );
+});
+
+//to filter the weather for a specific city from the bulk query
+router.get('/:city', (req, res) => {
+	request(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=bulk`,
+		function (error, response, body) {
+			let data = JSON.parse(body);
+			if (response.statusCode === 200) {
+                cityData = data.filter((el)=>  {return el.location.name == req.params.city})
+                res.render(`The weather in your city : ${data.location.name}, ${data.location.country} is ${data.current.condition.text} with temp: ${data.current.temp_c} deg celsius, humidity: ${data.current.humidity}%.`);
+			}
+			else console.log(error)
+		}
+	);
+});
+
 
 
 module.exports = router;
