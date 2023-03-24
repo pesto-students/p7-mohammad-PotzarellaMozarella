@@ -24,6 +24,8 @@ router.post('/', (req, res) => {
             }
             else {
                 let data = JSON.parse(body);
+                console.log(data)
+                
                 let cityWeather = {
                     name: data.location.name,
                     country: data.location.country,
@@ -59,7 +61,6 @@ router.post('/coord', (req, res) => {
             }
             else {
                 let data = JSON.parse(body);
-                console.log(data)
                 let cityWeather = {
                     name: data.location.name,
                     country: data.location.country,
