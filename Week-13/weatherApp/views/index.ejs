@@ -5,6 +5,7 @@
   </head>
   <body class="container">
     <header><%- include('pages/partials/header'); %></header>
+    <!-- Search area for input section -->
     <main>
       <div class="jumbotron">
         <h1>This is a weather app</h1>
@@ -29,9 +30,26 @@
             </button>
           </form>
         </div>
+
+        <div class="jumbotron">
+            <%if(cityWeather !== null) {%>
+            <div class="mb-3">
+              <h3>
+                <%= headline %> in <%= cityWeather.name %>, <%=
+                cityWeather.country %>:
+              </h3>
+              <p><%= cityWeather.condition %></p>
+              <p>Avg temp: <%= cityWeather.temp %> deg celsius</p>
+              <p>Humidity: <%= cityWeather.humidity %>%</p>
+            </div>
+            <%}%> <%if (error !== null) {%>
+            <p><%= error %></p>
+            <%}%>
+          </div>
       </div>
     </main>
-
+    <!--Weather result display section  -->
+    
     <footer><%- include('pages/partials/footer'); %></footer>
   </body>
 </html>
