@@ -34,11 +34,11 @@ const apiKey = '*****************';
 
 ##### Weather by city name
 - Type the city you are looking for
-![Home page](snapshots/Home page.png)
+![Home page](snapshots/Homepage.png)
 - Click search button
-![Search](snapshots/Home page_search.png)
+![Search](snapshots/Homepage_search.png)
 - The app show information about the location and conditions of the city
-![Result](snapshots/Home page_result.png)
+![Result](snapshots/Homepage_result.png)
 
 ##### Weather by city co-ordinates
 
