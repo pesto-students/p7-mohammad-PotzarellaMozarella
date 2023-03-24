@@ -8,7 +8,7 @@ const router = express.Router()
 //api key for weather app
 const apiKey = "256455341c0747b5ba181106232403"
 
-// Setup your default display on launch
+//setup default display on launch
 router.get("/", function (req, res) {
     // It will not fetch and display any data in the index page
     res.render("index", { cityWeather: null, error: null });
