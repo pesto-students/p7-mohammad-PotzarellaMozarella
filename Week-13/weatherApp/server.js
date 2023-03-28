@@ -12,7 +12,7 @@ require("dotenv").config();
 // Set up your OpenWeatherMap API_KEY
 
 //setting up the port for hosting server with fallback default value
-const port = process.env.port || 5000;
+const port = process.env.port || 4000;
 const apiKey = `${process.env.API_KEY}` || '256455341c0747b5ba181106232403';
 
 //setup express app and body-parser configurations

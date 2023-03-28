@@ -11,7 +11,7 @@
         <h1>This is a weather app</h1>
         <div class="input-group mb-3 my-5">
           <form
-            action="/"
+            action="/forecast"
             method="post"
             class="form-inline">
             <div class="form-group mb-2">
@@ -40,7 +40,8 @@
             <%if(forecast !== null) {%>
             <div class="mb-3">
                 <h3>
-                    <%= headline %>:
+                  <%= headline %> in <%= cityWeather.name %>, <%=
+                  cityWeather.country %> for the next <%= cityWeather.days %> days:
                   </h3>
                   <ul>
                     <% forecast.forEach(function(forecast) { %>

@@ -69,7 +69,7 @@ router.post('/coord', (req, res) => {
                     humidity: data.current.humidity
                 }
                 let headline = "The current weather condition"
-                res.render("coord", {
+                res.render('coord', {
                     cityWeather: cityWeather,
                     headline: headline,
                     error: null
@@ -85,7 +85,7 @@ router.get('/forecast', function (req, res) {
     res.render('forecast', { forecast: null, error: null });
 });
 
-router.get('/forecast', (req, res) => {
+router.post('/forecast', (req, res) => {
     let city = req.body.city
     let days = req.body.days
     var request = require('request')
@@ -97,17 +97,23 @@ router.get('/forecast', (req, res) => {
             }
             else {
                 let data = JSON.parse(body);
-                data.forecast.map(forecastday => {
+                let cityWeather = {
+                    name: data.location.name,
+                    country: data.location.country,
+                    days: days}
+                let forecastDaysArr = data.forecast.forecastday
+                Object.entries(forecastDaysArr).forEach(([_, value]) => {
                     forecast.push({
-                        date: forecastday.date,
-                        weatherConditon: forecastday.day.condition.text,
-                        maxTemp: forecastday.day.maxtemp_c,
-                        minTemp: forecastday.day.mintemp_c,
-                        humidity: forecastday.day.avghumidity
+                        date: value.date,
+                        weatherConditon: value.day.condition.text,
+                        maxTemp: value.day.maxtemp_c,
+                        minTemp: value.day.mintemp_c,
+                        humidity: value.day.avghumidity
                     })
-                })
-                let headline = "The current weather condition"
+                });
+                let headline = 'The weather forecast condition for'
                 res.render("forecast", {
+                    cityWeather: cityWeather,
                     forecast: forecast,
                     headline: headline,
                     error: null
@@ -138,7 +144,7 @@ router.get('/:city/:datetime', (req, res) => {
                         temp: data.current.temp_c,
                         humidity: data.current.humidity
                     }
-                    let headline = "The current weather condition at"
+                    let heading = "The current weather condition at"
                     res.render('pages/forecast/dateTime', {
                         cityWeather: cityWeather,
                         heading: heading
@@ -161,7 +167,7 @@ router.get('/:city/:datetime', (req, res) => {
                         temp: data.current.temp_c,
                         humidity: data.current.humidity
                     }
-                    let headline = "The current weather condition at"
+                    let heading = "The current weather condition at"
                     res.render('pages/forecast/dateTime', {
                         cityWeather: cityWeather,
                         heading: heading
@@ -206,21 +212,5 @@ router.get('/', (req, res) => {
         }
     );
 });
-
-//to filter the weather for a specific city from the bulk query
-router.get('/:city', (req, res) => {
-	request(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=bulk`,
-		function (error, response, body) {
-			let data = JSON.parse(body);
-			if (response.statusCode === 200) {
-                cityData = data.filter((el)=>  {return el.location.name == req.params.city})
-                res.render(`The weather in your city : ${data.location.name}, ${data.location.country} is ${data.current.condition.text} with temp: ${data.current.temp_c} deg celsius, humidity: ${data.current.humidity}%.`);
-			}
-			else console.log(error)
-		}
-	);
-});
-
-
 
 module.exports = router;
