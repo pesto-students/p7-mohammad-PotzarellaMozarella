@@ -1,7 +1,6 @@
 //to check whether the requested data is enough or right to succeed in an API call
-
-const { check, validationResult } = require("express-validator");
-const { StatusCodes } = require("http-status-codes");
+const { check, validationResult } = require("express-validator")
+const { StatusCodes } = require("http-status-codes")
 
 //middleware to validate signup request inputs and display msg 
 const validateSignUpRequest = [
@@ -12,7 +11,7 @@ const validateSignUpRequest = [
   check("password")
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 character long"),
-];
+]
 
 //middleware to validate signin request inputs
 const validateSignIpRequest = [
@@ -28,13 +27,13 @@ const isRequestValidated = (req, res, next) => {
   if (errors.array().length > 0) {
     return res
       .status(StatusCodes.BAD_REQUEST)
-      .json({ error: errors.array()[0].msg });
+      .json({ error: errors.array()[0].msg })
   }
   next();
-};
+}
 
 module.exports = {
   validateSignUpRequest,
   isRequestValidated,
   validateSignIpRequest,
-};
+}

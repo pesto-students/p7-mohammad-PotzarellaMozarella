@@ -1,8 +1,7 @@
-const { StatusCodes } = require("http-status-codes");
-const Users = require("../models/userSchemas");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
-const shortid = require("shortid");
+const { StatusCodes } = require("http-status-codes")
+const Users = require("../models/userSchemas")
+const jwt = require("jsonwebtoken")
+const bcrypt = require("bcrypt")
 
 /*
 Signup logic:
@@ -82,7 +81,8 @@ const signIn = async (req, res) => {
          });
       }
    } catch (error) {
-      res.status(StatusCodes.BAD_REQUEST).json({ error });
+      res.status(StatusCodes.BAD_REQUEST).json({ error })
    }
-};
-module.exports = { signUp, signIn };
+}
+
+module.exports = { signUp, signIn }

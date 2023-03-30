@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema, Types } = mongoose;
-const Users = require("/Users");
+const Users = require("/Users")
 
 //to create finance schema with _id from userSchema as foreign key 
 const financeSchema = new mongoose.Schema({
@@ -27,6 +27,6 @@ const financeSchema = new mongoose.Schema({
    createdBy: { 
       type: Types.ObjectId, 
       ref: Users }
-});
+})
 
-module.exports = Finance = mongoose.model("Finance", financeSchema);
+module.exports = Finance = mongoose.model("Finance", financeSchema)

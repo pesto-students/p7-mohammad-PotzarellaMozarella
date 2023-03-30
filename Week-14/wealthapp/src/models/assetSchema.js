@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const { Schema, Types } = mongoose;
-const Users = require("/Users");
+const mongoose = require("mongoose")
+const { Schema, Types } = mongoose
+const Users = require("/Users")
 
 //to create assets schema with _id from userSchema as foreign key 
 const assetsSchema = new mongoose.Schema({
@@ -27,6 +27,6 @@ const assetsSchema = new mongoose.Schema({
    createdBy: { 
       type: Types.ObjectId, 
       ref: Users }
-});
+})
 
-module.exports = Asset = mongoose.model("Asset", assetsSchema);
+module.exports = Asset = mongoose.model("Asset", assetsSchema)

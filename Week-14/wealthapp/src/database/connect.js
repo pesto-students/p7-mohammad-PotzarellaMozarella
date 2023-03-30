@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 //to connect mongoDB database with the application
 const connectDB = async (url) => {
@@ -10,13 +10,13 @@ const connectDB = async (url) => {
                 useUnifiedTopology: true,
                 useUnifiedTopology: true
             });
-        console.log("Connected to MongoDB");
+        console.log("Connected to MongoDB")
     } catch (err) {
-        console.log(err);
+        console.log(err)
     }
 
-};
+}
 
 
 
-module.exports = connectDB;
+module.exports = connectDB
