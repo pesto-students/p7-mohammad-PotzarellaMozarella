@@ -38,7 +38,43 @@ const userSchema = new mongoose.Schema({
    hash_password: {
       type: String,
       require: true,
-   }
+   },
+   assets: [{
+      type: {
+         type: String,
+         required: true,
+         enum: ['Equity', 'Fixed-Income', 'Alternatives', 'Assets'],
+         default: 'Expenses'
+      },
+      amount: {
+         type: Number,
+         required: true,
+         default: 0.0
+      },
+      date: {
+         type: Date,
+         required: true,
+         default: Date.now
+      }
+   }],
+   finance: [{
+      type: {
+         type: String,
+         required: true,
+         enum: ['Income', 'Expenses', 'Savings'],
+         default: 'Expenses'
+      },
+      amount: {
+         type: Number,
+         required: true,
+         default: 0.0
+      },
+      date: {
+         type: Date,
+         required: true,
+         default: Date.now
+      }
+   }]
 }, { timestamps: true });
 
 //to get fullName when we get data from database as virtual property that do not persist
@@ -52,7 +88,6 @@ userSchema.method({
       return bcrypt.compare(password, this.hash_password)
    },
 })
-
 
 module.exports = Users = mongoose.model("User", userSchema)
 

@@ -8,7 +8,7 @@ const {
   isRequestValidated,
   validateSignUpRequest,
   validateSignIpRequest,
-} = require("../validators/auth")
+} = require("../middleware/auth")
 
 /* Routes for  signup/signin using:
   -method to check valid inputs for signup/signin fields
