@@ -2,6 +2,7 @@ const { StatusCodes } = require("http-status-codes")
 const Users = require("../models/userSchemas")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
+const sendToken = require("../utils/sendToken")
 
 /*
 Signup logic:
@@ -66,9 +67,8 @@ const signIn = async (req, res) => {
             const token = jwt.sign(
                { _id: user._id },
                process.env.JWT_SECRET, { expiresIn: "30d" });
-               
             const { _id, firstName, lastName, userName, email, fullName } = user;
-            console.log(token)
+            
             res.status(StatusCodes.OK).json({
                token,
                user: { _id, firstName, lastName, userName, email, fullName },

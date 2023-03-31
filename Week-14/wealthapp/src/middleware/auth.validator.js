@@ -14,7 +14,7 @@ const validateSignUpRequest = [
 ]
 
 //middleware to validate signin request inputs
-const validateSignIpRequest = [
+const validateSignInRequest = [
   check("email").isEmail().withMessage("Valid Email required"),
   check("password")
     .isLength({ min: 6 })
@@ -35,5 +35,5 @@ const isRequestValidated = (req, res, next) => {
 module.exports = {
   validateSignUpRequest,
   isRequestValidated,
-  validateSignIpRequest,
+  validateSignInRequest,
 }

@@ -1,9 +1,11 @@
 const express = require("express");
 const dotenv = require("dotenv");
 
-//creating route for api
-const authRouter = require("./src/routes/auth");
+//creating route for signup/in api
+const authRouter = require("./src/routes/auth.routes");
 const app = express();
+
+
 
 //for managing app settings during development
 require("dotenv").config();
@@ -19,6 +21,7 @@ app.use(express.json());
 
 //Port and Connect to DB
 const port = process.env.PORT || 5000;
+
 
 app.use("/api", authRouter);
 
