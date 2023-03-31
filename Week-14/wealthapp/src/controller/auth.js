@@ -62,10 +62,13 @@ const signIn = async (req, res) => {
 
       if (user) {
          if (user.authenticate(req.body.password)) {
+            
             const token = jwt.sign(
                { _id: user._id },
                process.env.JWT_SECRET, { expiresIn: "30d" });
+               
             const { _id, firstName, lastName, userName, email, fullName } = user;
+            console.log(token)
             res.status(StatusCodes.OK).json({
                token,
                user: { _id, firstName, lastName, userName, email, fullName },
