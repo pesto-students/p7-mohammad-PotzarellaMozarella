@@ -51,10 +51,13 @@ const userSchema = new mongoose.Schema({
          required: true,
          default: 0.0
       },
-      date: {
-         type: Date,
-         required: true,
-         default: Date.now
+      year: {
+         type: Number,
+         required: true
+      },
+      month: {
+         type: Number,
+         required: true
       }
    }],
    finance: [{
@@ -69,10 +72,13 @@ const userSchema = new mongoose.Schema({
          required: true,
          default: 0.0
       },
-      date: {
-         type: Date,
-         required: true,
-         default: Date.now
+      year: {
+         type: Number,
+         required: true
+      },
+      month: {
+         type: Number,
+         required: true
       }
    }]
 }, { timestamps: true });

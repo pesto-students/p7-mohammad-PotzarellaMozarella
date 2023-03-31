@@ -2,7 +2,6 @@ const { StatusCodes } = require("http-status-codes")
 const Users = require("../models/userSchemas")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
-const sendToken = require("../utils/sendToken")
 
 /*
 Signup logic:
