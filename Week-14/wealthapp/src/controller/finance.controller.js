@@ -1,6 +1,6 @@
 const { StatusCodes } = require("http-status-codes")
 const Users = require("../models/userSchema")
-const jwt = require("jsonwebtoken")
+const { loginInputCheck, loginAuth } = require("../utils/loggedInUserCheck")
 
 /*
 User income/expenditure/savings info logic:
@@ -9,38 +9,23 @@ User income/expenditure/savings info logic:
 -filterFinances: filter results by financial year, or by month
 */
 
+
+let token, user 
+
 const addFinances = async (req, res) => {
     try {
-        if (!req.body.email || !req.body.password) {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "Please enter email and password",
-            });
-        }
-        const user = await Users.findOne({ email: req.body.email });
-        if (user) {
-            if (user.authenticate(req.body.password)) {
-                const token = jwt.sign(
-                    { _id: user._id },
-                    process.env.JWT_SECRET, { expiresIn: "30d" });
-                //add new income/expense to user's finance details array
-                user.finance.push(req.body.finance)
-                await user.save();
-                const { finance } = user;
-                res.status(StatusCodes.OK).json({
-                    token,
-                    message: "Finances updated",
-                    user: { finance },
-                });
-            } else {
-                res.status(StatusCodes.UNAUTHORIZED).json({
-                    message: "Something went wrong!",
-                });
-            }
-        } else {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "User does not exist..!",
-            });
-        }
+        loginInputCheck(req)
+        token = await loginAuth(req)
+        user = await Users.findOne({ email: req.body.email });
+        //add new income/expense to user's finance details array
+        user.finance.push(req.body.finance)
+        await user.save();
+        const { finance } = user;
+        res.status(StatusCodes.OK).json({
+            token,
+            message: "Finances updated",
+            user: { finance },
+        });
     } catch (error) {
         res.status(StatusCodes.BAD_REQUEST).json({ error })
     }
@@ -48,45 +33,27 @@ const addFinances = async (req, res) => {
 
 const getFinances = async (req, res) => {
     try {
-        if (!req.body.email || !req.body.password) {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "Please enter email and password",
-            });
-        }
-        const user = await Users.findOne({ email: req.body.email });
-        if (user) {
-            if (user.authenticate(req.body.password)) {
-                const token = jwt.sign(
-                    { _id: user._id },
-                    process.env.JWT_SECRET, { expiresIn: "30d" });
-                //gets current year
-                const d = new Date();
-                let year = d.getFullYear();
-                //loops over finances to calculate income, expenses and savings for current year
-                let income = 0, expenses = 0, savings = 0;
-                user.finance.forEach(finance => {
-                    if (finance.year == year && finance.type == 'Income') {
-                        income = income + finance.amount
-                    }
-                    else if (finance.year == year && finance.type == 'Expenses') {
-                        expenses = expenses + finance.amount
-                    }
-                })
-                savings = income - expenses
-                res.status(StatusCodes.OK).json({
-                    token,
-                    user: { income: income, expenses: expenses, savings: savings },
-                });
-            } else {
-                res.status(StatusCodes.UNAUTHORIZED).json({
-                    message: "Something went wrong!",
-                });
+        loginInputCheck(req)
+        token = await loginAuth(req)
+        user = await Users.findOne({ email: req.body.email });
+        //gets current year
+        const d = new Date();
+        let year = d.getFullYear();
+        //loops over finances to calculate income, expenses and savings for current year
+        let income = 0, expenses = 0, savings = 0;
+        user.finance.forEach(finance => {
+            if (finance.year == year && finance.type == 'Income') {
+                income = income + finance.amount
             }
-        } else {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "User does not exist..!",
-            });
-        }
+            else if (finance.year == year && finance.type == 'Expenses') {
+                expenses = expenses + finance.amount
+            }
+        })
+        savings = income - expenses
+        res.status(StatusCodes.OK).json({
+            token,
+            user: { income: income, expenses: expenses, savings: savings },
+        });
     } catch (error) {
         res.status(StatusCodes.BAD_REQUEST).json({ error })
     }
@@ -94,53 +61,31 @@ const getFinances = async (req, res) => {
 
 const filterFinances = async (req, res) => {
     try {
-        if (!req.body.email || !req.body.password) {
-            if (!req.params.month && !req.params.year) {
-                res.status(StatusCodes.BAD_REQUEST).json({
-                    message: "Please enter email and password",
-                });
-            }
+        loginInputCheck(req)
+        token = await loginAuth(req)
+        user = await Users.findOne({ email: req.body.email });
+        //checking if params has month/year or both and filtering by month or year
+        let result = [];
+        if (req.params.month && req.params.year) {
+            result = user.finance.filter(finance => {
+                return finance.year == req.params.year && finance.month == req.params.month;
+            })
         }
-        const user = await Users.findOne({ email: req.body.email });
-        if (user) {
-            if (user.authenticate(req.body.password)) {
-                const token = jwt.sign(
-                    { _id: user._id },
-                    process.env.JWT_SECRET, { expiresIn: "30d" });
-                //filtering by month or year
-                console.log(req.params.month)
-                console.log(req.params.year)
-                let result = [];
-                if (req.params.month && req.params.year) {
-                    result = user.finance.filter(finance => {
-                        return finance.year == req.params.year && finance.month == req.params.month;
-                    })
-                }
-                else if (req.params.year) {
-                    result = user.finance.filter(finance => {
-                        return finance.year == req.params.year;
-                    })
-                }
-                console.log(result)
-                if (!result.length) {
-                    res.status(StatusCodes.BAD_REQUEST).json({
-                        message: "Income/Expense details do not exist..!",
-                    });
-                }
-                else {
-                    res.status(StatusCodes.OK).json({
-                        token,
-                        user: { finance: result },
-                    });
-                }
-            } else {
-                res.status(StatusCodes.UNAUTHORIZED).json({
-                    message: "Something went wrong!",
-                });
-            }
-        } else {
+        else if (req.params.year) {
+            result = user.finance.filter(finance => {
+                return finance.year == req.params.year;
+            })
+        }
+        //if result array is empty an entry does not exist for the given month/year
+        if (!result.length) {
             res.status(StatusCodes.BAD_REQUEST).json({
-                message: "User does not exist..!",
+                message: "Income/Expense details do not exist..!",
+            });
+        }
+        else {
+            res.status(StatusCodes.OK).json({
+                token,
+                user: { finance: result },
             });
         }
     } catch (error) {
