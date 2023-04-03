@@ -64,8 +64,7 @@ const userSchema = new mongoose.Schema({
       type: {
          type: String,
          required: true,
-         enum: ['Income', 'Expenses', 'Savings'],
-         default: 'Expenses'
+         enum: ['Income', 'Expenses'],
       },
       amount: {
          type: Number,
