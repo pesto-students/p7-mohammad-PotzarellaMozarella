@@ -1,13 +1,51 @@
 const { StatusCodes } = require("http-status-codes")
-const Users = require("../models/userSchemas")
+const Users = require("../models/userSchema")
 const jwt = require("jsonwebtoken")
 
 /*
-User info logic:
--get all income, expenses and savings for current year
--update income or expenses for user
--filter results by financial year, or by month
+User income/expenditure/savings info logic:
+-getFinances: get all income, expenses and savings for current year
+-addFinances: update income or expenses for user
+-filterFinances: filter results by financial year, or by month
 */
+
+const addFinances = async (req, res) => {
+    try {
+        if (!req.body.email || !req.body.password) {
+            res.status(StatusCodes.BAD_REQUEST).json({
+                message: "Please enter email and password",
+            });
+        }
+        const user = await Users.findOne({ email: req.body.email });
+        if (user) {
+            if (user.authenticate(req.body.password)) {
+                const token = jwt.sign(
+                    { _id: user._id },
+                    process.env.JWT_SECRET, { expiresIn: "30d" });
+                //add new income/expense to user's finance details array
+                user.finance.push(req.body.finance)
+                await user.save();
+                const { finance } = user;
+                res.status(StatusCodes.OK).json({
+                    token,
+                    message: "Finances updated",
+                    user: { finance },
+                });
+            } else {
+                res.status(StatusCodes.UNAUTHORIZED).json({
+                    message: "Something went wrong!",
+                });
+            }
+        } else {
+            res.status(StatusCodes.BAD_REQUEST).json({
+                message: "User does not exist..!",
+            });
+        }
+    } catch (error) {
+        res.status(StatusCodes.BAD_REQUEST).json({ error })
+    }
+}
+
 const getFinances = async (req, res) => {
     try {
         if (!req.body.email || !req.body.password) {
@@ -18,7 +56,6 @@ const getFinances = async (req, res) => {
         const user = await Users.findOne({ email: req.body.email });
         if (user) {
             if (user.authenticate(req.body.password)) {
-
                 const token = jwt.sign(
                     { _id: user._id },
                     process.env.JWT_SECRET, { expiresIn: "30d" });
@@ -63,12 +100,10 @@ const filterFinances = async (req, res) => {
                     message: "Please enter email and password",
                 });
             }
-
         }
         const user = await Users.findOne({ email: req.body.email });
         if (user) {
             if (user.authenticate(req.body.password)) {
-
                 const token = jwt.sign(
                     { _id: user._id },
                     process.env.JWT_SECRET, { expiresIn: "30d" });
@@ -95,7 +130,7 @@ const filterFinances = async (req, res) => {
                 else {
                     res.status(StatusCodes.OK).json({
                         token,
-                        user: { finance: result},
+                        user: { finance: result },
                     });
                 }
             } else {
@@ -112,86 +147,5 @@ const filterFinances = async (req, res) => {
         res.status(StatusCodes.BAD_REQUEST).json({ error })
     }
 }
-
-const addFinances = async (req, res) => {
-    try {
-        if (!req.body.email || !req.body.password) {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "Please enter email and password",
-            });
-        }
-
-        const user = await Users.findOne({ email: req.body.email });
-
-        if (user) {
-            if (user.authenticate(req.body.password)) {
-
-                const token = jwt.sign(
-                    { _id: user._id },
-                    process.env.JWT_SECRET, { expiresIn: "30d" });
-
-                user.finance.push(req.body.finance)
-                await user.save();
-                const { finance } = user;
-                res.status(StatusCodes.OK).json({
-                    token,
-                    message: "Finaces updated",
-                    user: { finance },
-                });
-            } else {
-                res.status(StatusCodes.UNAUTHORIZED).json({
-                    message: "Something went wrong!",
-                });
-            }
-        } else {
-            res.status(StatusCodes.BAD_REQUEST).json({
-                message: "User does not exist..!",
-            });
-        }
-    } catch (error) {
-        res.status(StatusCodes.BAD_REQUEST).json({ error })
-    }
-}
-
-// const deleteFinances = async (req, res) => {
-//     try {
-//         if (!req.body.email || !req.body.password) {
-//             res.status(StatusCodes.BAD_REQUEST).json({
-//                 message: "Please enter email and password",
-//             });
-//         }
-
-//         const user = await Users.findOne({ email: req.body.email });
-
-//         if (user) {
-//             if (user.authenticate(req.body.password)) {
-
-//                 const token = jwt.sign(
-//                     { _id: user._id },
-//                     process.env.JWT_SECRET, { expiresIn: "30d" });
-
-//                 user.assets.pull(req.body.assets)
-//                 await user.save();
-//                 const { assets } = user;
-//                 res.status(StatusCodes.OK).json({
-//                     token,
-//                     message: "Assets deleted",
-//                     user: { assets },
-//                 });
-//             } else {
-//                 res.status(StatusCodes.UNAUTHORIZED).json({
-//                     message: "Something went wrong!",
-//                 });
-//             }
-//         } else {
-//             res.status(StatusCodes.BAD_REQUEST).json({
-//                 message: "User does not exist..!",
-//             });
-//         }
-//     } catch (error) {
-//         res.status(StatusCodes.BAD_REQUEST).json({ error })
-//     }
-// }
-
 
 module.exports = { getFinances, addFinances, filterFinances }
