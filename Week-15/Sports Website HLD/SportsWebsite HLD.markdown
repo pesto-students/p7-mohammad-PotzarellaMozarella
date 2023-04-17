@@ -62,7 +62,7 @@ The basic requirement for the platform would be a database. One can go for relat
 
 The operations in Twitter are **read-heavy**. So, the system we design should allow the user to go through the tweets efficiently. To make the system scalable, we would be using **horizontal scaling** as they are more resilient and scale well as the users increase. We can create three tables in the database: user table, tweet table, and followers table.
 
-**User table (userID, userName):** It will store the information about the user like the userID and the userName. Here the [primary key](https://www.codingninjas.com/blog/2021/07/17/what-is-primary-key-in-sql/) can be the userId attribute. The user's information is stored when a user creates a profile on Twitter.
+**User table (userID, userName):** It will store the information about the user like the userID and the userName. Here the primary key can be the userId attribute. The user's information is stored when a user creates a profile on Twitter.
 
 **Tweet table (tweetID, content, userID, date):** It will store the tweet's id, the tweet's content, user id, and date tweeted. Here the primary key can be the tweetId attribute. When a user tweets, the tweet gets stored in the tweet Table along with the userID and they will have a one-to-many relationship with the user table.
 
@@ -77,7 +77,7 @@ When deciding on a data storage solution for a large platform with many users, i
 For entities like users and their followers, we may consider using a graph-based data store solution. By using the appropriate data store for each type of data, we can ensure that the system is able to handle a large volume of data and scale effectively.
 
 ### High Level Design
-![HLD](https://i.imgur.com/Y9IYydZ.png)
+![HLD](HLD.png)
 - Use **Horizontal Scaling** to handle increasing loads and to address single points of failure
     - Add a **Load Balancer**
         - If you are configuring your own **Load Balancer**, setting up multiple servers in active-active or active-passive in multiple availability zones will improve availability
