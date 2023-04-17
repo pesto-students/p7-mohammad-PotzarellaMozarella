@@ -62,7 +62,7 @@ To make the system highly available, we can use load balancers, multiple web ser
 Finally, we can employ additional SQL scaling patterns, such as federation or sharding, to address the bottleneck with the SQL database.
 
 ### High Level Design
-
+![HLD](HLD.png)
 - The website will be designed to handle a large number of concurrent users.
 - Load balancing and caching mechanisms will be implemented to ensure high availability and performance.
 - Use **Horizontal Scaling** to handle increasing loads and to address single points of failure
