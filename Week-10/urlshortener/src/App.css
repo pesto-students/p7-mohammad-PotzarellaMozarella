@@ -1,0 +1,14 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spinner {
+  width: '100px';
+  margin: 'auto'; 
+  display: 'block';
+}
+
+.validator {
+  font-weight: bold;
+  color: red;
+}
