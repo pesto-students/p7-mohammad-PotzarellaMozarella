@@ -13,7 +13,8 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 * react toolkit
 * bootstrap
 
-### Screenshots
+
+
 ***
 ![LightSwitch](src/Images/Light.png)
 ![DarkSwitch](src/Images/Dark.png)
