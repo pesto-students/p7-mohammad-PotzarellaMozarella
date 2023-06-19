@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 6619347,
+    "name": "Navi Mumbai",
+    "state": "",
+    "country": "IN",
+    "coord": {
+      "lon": 73.015823,
+      "lat": 19.03681
+    }
+  },
+  {
+    "id": 6619349,
+    "name": "Breach Candy",
+    "state": "",
+    "country": "IN",
+    "coord": {
+      "lon": 72.804756,
+      "lat": 18.971466
+    }
+  },
+  {
+    "id": 6619358,
+    "name": "Powiat olsztyński",
+    "state": "",
+    "country": "PL",
+    "coord": {
+      "lon": 20.56641,
+      "lat": 53.729221
+    }
+  },
+  {
+    "id": 6619396,
+    "name": "Asian Games Village",
+    "state": "",
+    "country": "IN",
+    "coord": {
+      "lon": 77.214577,
+      "lat": 28.553314
+    }
+  },
+  {
+    "id": 6619483,
+    "name": "Kaleen",
+    "state": "",
+    "country": "AU",
+    "coord": {
+      "lon": 149.105164,
+      "lat": -35.21814
+    }
+  },
+  {
+    "id": 6619578,
+    "name": "Millery",
+    "state": "",
+    "country": "FR",
+    "coord": {
+      "lon": 4.31368,
+      "lat": 47.5172
+    }
+  },
+  {
+    "id": 6619659,
+    "name": "Val-de-Reuil",
+    "state": "",
+    "country": "FR",
+    "coord": {
+      "lon": 1.21021,
+      "lat": 49.273849
+    }
+  },
+  {
+    "id": 6619695,
+    "name": "Cameley",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.56079,
+      "lat": 51.316158
+    }
+  },
+  {
+    "id": 6619707,
+    "name": "Kala Ghoda",
+    "state": "",
+    "country": "IN",
+    "coord": {
+      "lon": 72.832962,
+      "lat": 18.92926
+    }
+  },
+  {
+    "id": 6619708,
+    "name": "Majorna",
+    "state": "",
+    "country": "SE",
+    "coord": {
+      "lon": 11.91605,
+      "lat": 57.691952
+    }
+  },
+  {
+    "id": 6619766,
+    "name": "Bradley Cross",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.76256,
+      "lat": 51.274879
+    }
+  },
+  {
+    "id": 6619861,
+    "name": "Hart bei Graz",
+    "state": "",
+    "country": "AT",
+    "coord": {
+      "lon": 15.51527,
+      "lat": 47.04311
+    }
+  },
+  {
+    "id": 6619866,
+    "name": "East Croydon Railway Station",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.0925,
+      "lat": 51.375
+    }
+  },
+  {
+    "id": 6619985,
+    "name": "Copthorne",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.11742,
+      "lat": 51.13929
+    }
+  },
+  {
+    "id": 6620042,
+    "name": "L'Oudon",
+    "state": "",
+    "country": "FR",
+    "coord": {
+      "lon": 0.00966,
+      "lat": 48.997059
+    }
+  },
+  {
+    "id": 6620209,
+    "name": "Bastelicaccia",
+    "state": "",
+    "country": "FR",
+    "coord": {
+      "lon": 8.8289,
+      "lat": 41.922001
+    }
+  },
+  {
+    "id": 6620235,
+    "name": "francisco villa",
+    "state": "",
+    "country": "MX",
+    "coord": {
+      "lon": -97.76442,
+      "lat": 18.844061
+    }
+  },
+  {
+    "id": 6620239,
+    "name": "Etoy",
+    "state": "",
+    "country": "CH",
+    "coord": {
+      "lon": 6.41816,
+      "lat": 46.48587
+    }
+  },
+  {
+    "id": 6620293,
+    "name": "Yateley",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.82985,
+      "lat": 51.343048
+    }
+  },
+  {
+    "id": 6620300,
+    "name": "Oakmere",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.64054,
+      "lat": 53.219959
+    }
+  },
+  {
+    "id": 6620306,
+    "name": "East Ayton",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.47483,
+      "lat": 54.254799
+    }
+  },
+  {
+    "id": 6620307,
+    "name": "Cenerente",
+    "state": "",
+    "country": "IT",
+    "coord": {
+      "lon": 12.35413,
+      "lat": 43.1464
+    }
+  },
+  {
+    "id": 6620308,
+    "name": "Westcliff-on-Sea",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": 0.69179,
+      "lat": 51.544239
+    }
+  },
+  {
+    "id": 6620310,
+    "name": "Didsbury",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.23145,
+      "lat": 53.416981
+    }
+  },
+  {
+    "id": 6620318,
+    "name": "Capraia Fiorentina",
+    "state": "",
+    "country": "IT",
+    "coord": {
+      "lon": 11.01268,
+      "lat": 43.737492
+    }
+  },
+  {
+    "id": 6620335,
+    "name": "Frankby",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -3.13703,
+      "lat": 53.372581
+    }
+  },
+  {
+    "id": 6620337,
+    "name": "Hellaby",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -1.24125,
+      "lat": 53.422569
+    }
+  },
+  {
+    "id": 6620339,
+    "name": "Karratha",
+    "state": "",
+    "country": "AU",
+    "coord": {
+      "lon": 116.846291,
+      "lat": -20.73765
+    }
+  },
+  {
+    "id": 6620345,
+    "name": "Langstone",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.91206,
+      "lat": 51.605541
+    }
+  },
+  {
+    "id": 6620349,
+    "name": "Tintern",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -2.68142,
+      "lat": 51.69677
+    }
+  },
+  {
+    "id": 6620354,
+    "name": "Barham",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": 1.15734,
+      "lat": 51.2057
+    }
+  },
+  {
+    "id": 6620355,
+    "name": "Bowthorpe",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": 1.21885,
+      "lat": 52.63884
+    }
+  },
+  {
+    "id": 6620360,
+    "name": "Hedge End",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -1.30076,
+      "lat": 50.912338
+    }
+  },
+  {
+    "id": 6620367,
+    "name": "Virginia Water",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.56651,
+      "lat": 51.403431
+    }
+  },
+  {
+    "id": 6620380,
+    "name": "Guernsey (general)",
+    "state": "",
+    "country": "GG",
+    "coord": {
+      "lon": -2.54057,
+      "lat": 49.456242
+    }
+  },
+  {
+    "id": 6620382,
+    "name": "Isle of Man",
+    "state": "",
+    "country": "IM",
+    "coord": {
+      "lon": -4.4844,
+      "lat": 54.15052
+    }
+  },
+  {
+    "id": 6620384,
+    "name": "Jersey (general)",
+    "state": "",
+    "country": "JE",
+    "coord": {
+      "lon": -2.10034,
+      "lat": 49.183399
+    }
+  },
+  {
+    "id": 6620426,
+    "name": "Churt",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.77534,
+      "lat": 51.136028
+    }
+  },
+  {
+    "id": 6620428,
+    "name": "Danby",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.91073,
+      "lat": 54.466061
+    }
+  },
+  {
+    "id": 6620444,
+    "name": "Gerrards Cross",
+    "state": "",
+    "country": "GB",
+    "coord": {
+      "lon": -0.55543,
+      "lat": 51.586102
+    }
+  },
+  {
+    "id": 6620445,
+    "name": "Belle-Plagne",
+    "state": "",
+    "country": "FR",
+    "coord": {
+      "lon": 6.70685,
+      "lat": 45.509319
+    }
+  },
+  {
+    "id": 6620455,
+    "name": "Auroville",
+    "state": "",
+    "country": "IN",
+    "coord": {
+      "lon": 79.808853,
+      "lat": 12.00549
+    }
+  },
+  {
+    "id": 6620467,
+    "name": "St-Jean-Port-Joli",
+    "state": "",
+    "country": "CA",
+    "coord": {
+      "lon": -70.265808,
+      "lat": 47.217121
+    }
+  },
+  {
+    "id": 6620518,
+    "name": "Somié",
+    "state": "",
+    "country": "CM",
+    "coord": {
+      "lon": 11.43299,
+      "lat": 6.45843
+    }
+  },
+  {
+    "id": 6620522,
+    "name": "Faa'a",
+    "state": "",
+    "country": "PF",
+    "coord": {
+      "lon": -149.605988,
+      "lat": -17.557631
+    }
+  },
+  {
+    "id": 6620952,
+    "name": "Warang",
+    "state": "",
+    "country": "SN",
+    "coord": {
+      "lon": -16.943661,
+      "lat": 14.37349
+    }
+  },
+  {
+    "id": 833,
+    "name": "Ḩeşār-e Sefīd",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 47.159401,
+      "lat": 34.330502
+    }
+  },
+  {
+    "id": 2960,
+    "name": "‘Ayn Ḩalāqīm",
+    "state": "",
+    "country": "SY",
+    "coord": {
+      "lon": 36.321911,
+      "lat": 34.940079
+    }
+  },
+  {
+    "id": 3245,
+    "name": "Taglag",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 44.98333,
+      "lat": 38.450001
+    }
+  },
+  {
+    "id": 3530,
+    "name": "Qabāghlū",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 46.168499,
+      "lat": 36.173302
+    }
+  },
+  {
+    "id": 5174,
+    "name": "‘Arīqah",
+    "state": "",
+    "country": "SY",
+    "coord": {
+      "lon": 36.48336,
+      "lat": 32.889809
+    }
+  },
+  {
+    "id": 7264,
+    "name": "Kalāteh-ye Dowlat",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 57.616982,
+      "lat": 36.163841
+    }
+  },
+  {
+    "id": 8084,
+    "name": "Behjatābād",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 51.461639,
+      "lat": 36.667431
+    }
+  },
+  {
+    "id": 9874,
+    "name": "Ţālesh Maḩalleh",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 50.679192,
+      "lat": 36.894329
+    }
+  },
+  {
+    "id": 11263,
+    "name": "Shahrīār Kandeh",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 53.19902,
+      "lat": 36.631939
+    }
+  },
+  {
+    "id": 11754,
+    "name": "Bālā Aḩmad Kolā",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 52.667271,
+      "lat": 36.649059
+    }
+  },
+  {
+    "id": 12795,
+    "name": "Aş Şūrah aş Şaghīrah",
+    "state": "",
+    "country": "SY",
+    "coord": {
+      "lon": 36.573872,
+      "lat": 33.032669
+    }
+  },
+  {
+    "id": 14177,
+    "name": "Āqdūz",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 44.26556,
+      "lat": 39.197498
+    }
+  },
+  {
+    "id": 14256,
+    "name": "Āzādshahr",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 48.570728,
+      "lat": 34.790878
+    }
+  },
+  {
+    "id": 18007,
+    "name": "Gollar",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 46.25,
+      "lat": 37.383331
+    }
+  },
+  {
+    "id": 18093,
+    "name": "Dīgāleh",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 45.106998,
+      "lat": 37.552502
+    }
+  },
+  {
+    "id": 18557,
+    "name": "Qarālar-e Mīrzā Ḩoseynqolī",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 45.067501,
+      "lat": 37.674702
+    }
+  },
+  {
+    "id": 18918,
+    "name": "Protaras",
+    "state": "",
+    "country": "CY",
+    "coord": {
+      "lon": 34.058331,
+      "lat": 35.012501
+    }
+  },
+  {
+    "id": 23814,
+    "name": "Kahrīz",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 47.055302,
+      "lat": 34.383801
+    }
+  },
+  {
+    "id": 24851,
+    "name": "Nūrābād",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 47.9725,
+      "lat": 34.073399
+    }
+  },
+  {
+    "id": 29033,
+    "name": "Rokan Sarā",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 49.608101,
+      "lat": 37.32085
+    }
+  },
+  {
+    "id": 30321,
+    "name": "Zīrjān",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 58.43586,
+      "lat": 34.214401
+    }
+  },
+  {
+    "id": 30485,
+    "name": "Dahasuways",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 50.729439,
+      "lat": 15.72389
+    }
+  },
+  {
+    "id": 30490,
+    "name": "Ash Shihr",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 49.606392,
+      "lat": 14.75863
+    }
+  },
+  {
+    "id": 30543,
+    "name": "Al Ghaylah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 45.583328,
+      "lat": 14.59583
+    }
+  },
+  {
+    "id": 30616,
+    "name": "Judaydah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 45.299622,
+      "lat": 15.07512
+    }
+  },
+  {
+    "id": 30689,
+    "name": "Dawran",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.441959,
+      "lat": 13.77436
+    }
+  },
+  {
+    "id": 30696,
+    "name": "Najd al Jumai",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.324139,
+      "lat": 13.91581
+    }
+  },
+  {
+    "id": 30714,
+    "name": "Zalmat al Alya",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.09404,
+      "lat": 14.1023
+    }
+  },
+  {
+    "id": 30729,
+    "name": "Suq ar Rabu",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.01511,
+      "lat": 14.51155
+    }
+  },
+  {
+    "id": 30735,
+    "name": "Ash Shuqayrah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.786362,
+      "lat": 13.13452
+    }
+  },
+  {
+    "id": 30740,
+    "name": "Mashraah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.99588,
+      "lat": 13.53235
+    }
+  },
+  {
+    "id": 30748,
+    "name": "Ar Rawnah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.80286,
+      "lat": 13.75638
+    }
+  },
+  {
+    "id": 30762,
+    "name": "Ar Ramadi",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.784569,
+      "lat": 13.95641
+    }
+  },
+  {
+    "id": 30777,
+    "name": "Al Ahad",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.64167,
+      "lat": 14.25833
+    }
+  },
+  {
+    "id": 30788,
+    "name": "Ad Dil",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.818279,
+      "lat": 14.67199
+    }
+  },
+  {
+    "id": 30789,
+    "name": "Al Jabin",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.599041,
+      "lat": 14.70401
+    }
+  },
+  {
+    "id": 32516,
+    "name": "Badrābād-e `Olyā",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 48.279442,
+      "lat": 33.42944
+    }
+  },
+  {
+    "id": 32723,
+    "name": "Īstgāh-e Rāh Āhan-e Garmsār",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 52.309422,
+      "lat": 35.23455
+    }
+  },
+  {
+    "id": 32767,
+    "name": "Qarchak",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 51.56889,
+      "lat": 35.439442
+    }
+  },
+  {
+    "id": 34703,
+    "name": "Suq Sirwah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 45.01667,
+      "lat": 15.45417
+    }
+  },
+  {
+    "id": 34717,
+    "name": "Majzar",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.775002,
+      "lat": 15.85
+    }
+  },
+  {
+    "id": 34724,
+    "name": "Bidbadah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 44.700001,
+      "lat": 15.425
+    }
+  },
+  {
+    "id": 34821,
+    "name": "Matwah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.642132,
+      "lat": 15.0676
+    }
+  },
+  {
+    "id": 34827,
+    "name": "Suwayr",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.609859,
+      "lat": 16.181801
+    }
+  },
+  {
+    "id": 34846,
+    "name": "Wadarah",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.483212,
+      "lat": 15.71073
+    }
+  },
+  {
+    "id": 34862,
+    "name": "Suq Shamar",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.368061,
+      "lat": 15.885
+    }
+  },
+  {
+    "id": 34886,
+    "name": "Mustaba",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.248951,
+      "lat": 16.228161
+    }
+  },
+  {
+    "id": 34888,
+    "name": "An Nazir",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.26226,
+      "lat": 16.909161
+    }
+  },
+  {
+    "id": 34915,
+    "name": "Dayr al Ḩisī",
+    "state": "",
+    "country": "YE",
+    "coord": {
+      "lon": 43.099998,
+      "lat": 16.049999
+    }
+  },
+  {
+    "id": 35056,
+    "name": "Tabrīz Jānī",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 46.23333,
+      "lat": 38.133331
+    }
+  },
+  {
+    "id": 36741,
+    "name": "Andīmeshk",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 48.383331,
+      "lat": 32.533329
+    }
+  },
+  {
+    "id": 37755,
+    "name": "Ravīndūzaq",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 48.080002,
+      "lat": 38.4398
+    }
+  },
+  {
+    "id": 39161,
+    "name": "Māmā’ī",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 54.397739,
+      "lat": 36.892578
+    }
+  },
+  {
+    "id": 40847,
+    "name": "Reẕāābād",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 57.31778,
+      "lat": 37.499722
+    }
+  },
+  {
+    "id": 41210,
+    "name": "Khorramdarreh",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 49.195999,
+      "lat": 36.213001
+    }
+  },
+  {
+    "id": 41964,
+    "name": "Kūchaklī",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 50.533329,
+      "lat": 35.466671
+    }
+  },
+  {
+    "id": 44992,
+    "name": "Koshtārgāh",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 49.166672,
+      "lat": 30.549999
+    }
+  },
+  {
+    "id": 45013,
+    "name": "Jozf-e Soflá",
+    "state": "",
+    "country": "IR",
+    "coord": {
+      "lon": 48.224098,
+      "lat": 30.365499
+    }
+  },
+  {
+    "id": 49518,
+    "name": "Republic of Rwanda",
+    "state": "",
+    "country": "RW",
+    "coord": {
+      "lon": 30.0,
+      "lat": -2.0
+    }
+  },
+  {
+    "id": 49593,
+    "name": "Yeed",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 43.033329,
+      "lat": 4.55
+    }
+  },
+  {
+    "id": 49747,
+    "name": "Xuddur",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 43.88945,
+      "lat": 4.12129
+    }
+  },
+  {
+    "id": 50064,
+    "name": "Xarardheere",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 47.857498,
+      "lat": 4.6544
+    }
+  },
+  {
+    "id": 50360,
+    "name": "Gobolka Woqooyi Galbeed",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 44.5,
+      "lat": 10.0
+    }
+  },
+  {
+    "id": 50672,
+    "name": "Wanlaweyn",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 44.893799,
+      "lat": 2.6185
+    }
+  },
+  {
+    "id": 50814,
+    "name": "Waajid",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 43.246281,
+      "lat": 3.80958
+    }
+  },
+  {
+    "id": 51230,
+    "name": "Gobolka Togdheer",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 45.416672,
+      "lat": 9.33333
+    }
+  },
+  {
+    "id": 51299,
+    "name": "Tayeeglow",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 44.51112,
+      "lat": 4.01897
+    }
+  },
+  {
+    "id": 51537,
+    "name": "Somalia",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 48.0,
+      "lat": 6.0
+    }
+  },
+  {
+    "id": 51966,
+    "name": "Gobolka Shabeellaha Hoose",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 44.416672,
+      "lat": 1.83333
+    }
+  },
+  {
+    "id": 51967,
+    "name": "Gobolka Shabeellaha Dhexe",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 46.0,
+      "lat": 3.0
+    }
+  },
+  {
+    "id": 52187,
+    "name": "Gobolka Sanaag",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 48.0,
+      "lat": 10.5
+    }
+  },
+  {
+    "id": 52381,
+    "name": "Saacow",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 42.440659,
+      "lat": 1.62794
+    }
+  },
+  {
+    "id": 52867,
+    "name": "Qoryooley",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 44.529991,
+      "lat": 1.78784
+    }
+  },
+  {
+    "id": 53157,
+    "name": "Qandala",
+    "state": "",
+    "country": "SO",
+    "coord": {
+      "lon": 49.872822,
+      "lat": 11.47197
+    }
+  }
+]

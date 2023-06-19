@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('pages/partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('pages/partials/header'); %></header>
+    <!-- Search area for input section -->
+    <main>
+      <div class="jumbotron">
+        <h1>This is a weather app</h1>
+        <div class="input-group mb-3 my-5">
+          <form
+            action="/coord"
+            method="post"
+            class="form-inline">
+            <div class="form-group mb-2">
+              <input
+                name="lat"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Enter city latitude" />
+                <input
+                name="lon"
+                type="text"
+                class="form-control mx-sm-3"
+                placeholder="Enter city longitude" />
+            </div>
+
+            <button
+              type="submit"
+              value="Get weather"
+              class="btn btn-primary mb-2">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div class="jumbotron">
+            <%if(cityWeather !== null) {%>
+            <div class="mb-3">
+              <h3>
+                <%= headline %> in <%= cityWeather.name %>, <%=
+                cityWeather.country %>:
+              </h3>
+              <p><%= cityWeather.condition %></p>
+              <p>Avg temp: <%= cityWeather.temp %> deg celsius</p>
+              <p>Humidity: <%= cityWeather.humidity %>%</p>
+            </div>
+            <%}%> <%if (error !== null) {%>
+            <p><%= error %></p>
+            <%}%>
+          </div>
+      </div>
+    </main>
+    <!--Weather result display section  -->
+    
+    <footer><%- include('pages/partials/footer'); %></footer>
+  </body>
+</html>
