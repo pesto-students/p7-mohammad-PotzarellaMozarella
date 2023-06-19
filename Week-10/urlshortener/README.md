@@ -22,7 +22,7 @@ You can find more about the assignment at [API shortner app](https://pestotech.t
 ![Homepage](Images/smolURL_screenshot.png)
 ***
 
-### Setup
+### Setup on local
 1. clone repo
 ```
 $ git clone https://github.com/PotzarellaMozarella/p7-mohammad-Parisha/tree/week10/Week-10/urlshortener
