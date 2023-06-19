@@ -1,6 +1,5 @@
 import React from 'react';
 import spinner from '../images/Spinner.gif';
-import '../App.css';
 
 {/* Custom Spinner for display when error boundaries catch error */}
 function Spinner() {
@@ -8,12 +7,12 @@ function Spinner() {
     <div>
       <img
         src={spinner}
+        style={{ width: '100px', margin: 'auto', display: 'block' }}
         alt="Loading..."
-        className='rounded-circle spinner'
+        className='rounded-circle '
       />
     </div>
   );
 };
 
 export default Spinner;
-

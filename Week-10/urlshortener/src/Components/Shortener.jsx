@@ -1,7 +1,5 @@
 import { React, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import validator from 'validator';
-import '../App.css';
 
 // handles getting the short-links from the storage
 // if none exists from previous sessions it returns []
@@ -20,8 +18,6 @@ export default function Shortener() {
   const [buttonText, setButtonText] = useState("Copy");
   //for loading spinner
   const [loading, setLoading] = useState(false);
-  //for validating input url
-  const [errorMessage, setErrorMessage] = useState('')
 
   // handles submit of long url
   // fetching the short urls using async/await
@@ -44,7 +40,7 @@ export default function Shortener() {
           setLinks(data.result);
           setUserInput("");
         }
-        catch (error) {
+        catch(error) {
           console.log('Error', error)
         }
         finally {
@@ -54,7 +50,7 @@ export default function Shortener() {
       shortenLink()
     }
   }
-
+ 
   // handles copying link to clipboard
   // changing text on copy button on click
   const handleCopy = () => {
@@ -66,20 +62,16 @@ export default function Shortener() {
     localStorage.setItem("links", JSON.stringify(links));
   }, [links]);
 
-  const validate = (value) => {
-    validator.isURL(value) ? setErrorMessage('Is Valid URL') : setErrorMessage('Is Not Valid URL')
-  }
-
   return (
     <>
       {/* Uses ternary operator to show loading screen or component */}
       <div>
         {loading ? (
           <div class="d-flex justify-content-center my-5">
-            <div class="spinner-border" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
           </div>
+        </div>
         ) : (
           <div
             style={{ backgroundColor: "black" }}
@@ -94,12 +86,8 @@ export default function Shortener() {
                   placeholder="Shorten a link here"
                   className="form-control"
                   value={userInput}
-                  onChange={(e) => {
-                    validate(e.target.value)
-                    setUserInput(e.target.value)
-                  }}
+                  onChange={(e) => setUserInput(e.target.value)}
                 />
-                <span className="validator">{errorMessage}</span>
               </div>
               <div className="col-auto">
                 <button
@@ -115,7 +103,7 @@ export default function Shortener() {
 
             <div className="bg-black text-center">
               <article className="text-white my-4">
-                <h6>{links.original_link ? links.original_link : <p>No links available yet</p>}</h6>
+                <h6>{links.original_link}</h6>
               </article>
 
               <article>
