@@ -1,0 +1,14 @@
+{
+  "name": "parkinglotlld",
+  "version": "1.0.0",
+  "description": "parking lot LLD assignment",
+  "main": "parkingLot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "parisha",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
